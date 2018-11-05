@@ -1,0 +1,1000 @@
+P04637	S|14-15|A	Loss of interaction with PPP2R5C, PPP2CA AND PPP2R1A.
+P04637	T|17-18|A	No effect on interaction with MDM2 and increase in protein levels after DNA damage.
+P04637	S|19-20|A	Abolishes phosphorylation site. Abolishes increase in protein levels after DNA damage.
+P04637	S|19-20|D	Constitutively increased TP53 protein levels.
+P04637	LW|21-23|QS	Loss of interaction with MDM2, leading to constitutively increased TP53 protein levels.
+P04637	S|36-37|D	Abolihes phosphorylation by MAPKAPK5.
+P04637	S|45-46|A	Abolishes phosphorylation by DYRK2 and HIPK2 and acetylation of K-382 by CREBBP.
+P04637	None|45-46|None	Alters interaction with WWOX.
+P04637	T|54-55|A	Blocks phosphorylation by TAF1.
+P04637	S|182-183|A	Abolishes strongly phosphorylation.
+P04637	S|182-183|E	Inhibits slightly its transcriptional activity.
+P04637	R|247-248|S	Does not induce SNAI1 degradation.
+P04637	S|268-269|A	Abolishes phosphorylation.
+P04637	S|268-269|E	Inhibits strongly its transcriptional activity.
+P04637	T|283-284|E	Inhibits strongly its transcriptional activity.
+P04637	KK|290-292|RR	Abolishes polyubiquitination by MKRN1.
+P04637	K|318-319|A	Loss of nuclear localization; when associated with A-320 and A-321.
+P04637	K|319-320|A	Loss of nuclear localization; when associated with A-319 and A-321.
+P04637	K|320-321|A	Loss of nuclear localization; when associated with A-319 and A-320.
+P04637	P|358-359|D	Abolishes binding to USP7.
+P04637	G|360-361|E	Abolishes binding to USP7.
+P04637	S|361-362|A	Abolishes binding to USP7.
+P04637	K|369-370|R	Induces a decrease in methylation by SMYD2.
+P04637	K|371-372|R	Induces a decrease in protein stabilization.
+P04637	K|372-373|R	Abolishes dimethylation by EHMT1 and EHMT2.
+P04637	K|381-382|A	Abolishes acetylation by CREBBP.
+P04637	K|381-382|R	Abolishes monomethylation by KMT5A.
+P04637	L|382-383|A	Abolishes S-315 phosphorylation by CDK2/cyclin A.
+P04637	F|384-385|A	Reduced SUMO1 conjugation.
+P04637	K|385-386|A	Abolishes SUMO1 conjugation, in vitro and in vivo.
+P04637	T|386-387|A	No effect SUMO1 conjugation.
+P04637	E|387-388|A	Abolishes SUMO1 conjugation.
+Q14524	Q|1475-1476|K	Induces accelerated recovery from channel fast inactivation.
+Q14524	D|1609-1610|R	High decrease in affinity to the sea anemone toxin anthopleurin-B.
+Q14524	DPE|1801-1804|APA	Abolishes calcium response on channel inactivation.
+Q14524	P|1973-1974|A	Strongly reduces interaction with NEDD4, NEDD4L or WWP2.
+Q14524	P|1974-1975|A	Strongly reduces interaction with NEDD4, NEDD4L or WWP2.
+Q14524	S|1975-1976|A	Strongly reduces interaction with NEDD4, NEDD4L or WWP2.
+Q14524	Y|1976-1977|A	Strongly reduces interaction with NEDD4, NEDD4L or WWP2.
+Q14524	D|1977-1978|A	No effect on interaction with NEDD4, NEDD4L or WWP2.
+Q14524	S|1978-1979|A	No effect on interaction with NEDD4, NEDD4L or WWP2.
+Q14524	V|1979-1980|A	No effect on interaction with NEDD4, NEDD4L or WWP2.
+Q14524	V|1979-1980|R	Strongly reduces interaction with NEDD4L.
+P35555	G|1541-1542|D	Loss of integrin-mediated cell adhesion.
+P35555	R|2727-2728|A	Abolishes furin cleavage site, leading to defects in protein processing at the C-terminus.
+P35555	R|2730-2731|K	Abolishes furin cleavage site, leading to defects in protein processing at the C-terminus.
+P35555	S|2731-2732|T	Defects in protein processing at the C-terminus.
+P00533	Y|274-275|A	Strongly reduced autophosphorylation and activation of downstream kinases; when associated with A-309.
+P00533	F|286-287|A	Strongly reduced autophosphorylation and activation of downstream kinases; when associated with A-309.
+P00533	R|308-309|S	Strongly reduced autophosphorylation and activation of downstream kinases; when associated with A-275. Strongly reduced autophosphorylation and activation of downstream kinases; when associated with A-287.
+P00533	R|428-429|E	Abolishes autophosphorylation and activation of downstream kinases.
+P00533	DGPH|586-590|AGPA	Decreases intramolecular interactions and facilitates EGF binding.
+P00533	K|608-609|A	Decreases intramolecular interactions and facilitates EGF binding.
+P00533	L|687-688|A	Strongly reduced phosphorylation.
+P00533	V|688-689|A	Reduced autophosphorylation.
+P00533	V|688-689|M	Constitutively activated kinase.
+P00533	E|689-690|A	Reduced phosphorylation.
+P00533	L|691-692|P	Strongly reduced phosphorylation.
+P00533	T|692-693|A	Increased phosphorylation.
+P00533	T|692-693|D	Strongly reduced phosphorylation.
+P00533	P|693-694|A	Strongly reduced phosphorylation.
+P00533	P|698-699|A	Reduced phosphorylation.
+P00533	N|699-700|A	Abolishes phosphorylation.
+P00533	L|703-704|A	Abolishes phosphorylation.
+P00533	R|704-705|A	Abolishes phosphorylation.
+P00533	I|705-706|A	Abolishes phosphorylation.
+P00533	K|744-745|M	Abolishes kinase activity.
+P00533	D|973-974|A	Strongly reduced phosphorylation.
+P00533	R|976-977|A	Reduced phosphorylation.
+P00533	ED|1004-1006|RK	Constitutively activated kinase.
+P00533	Y|1015-1016|F	50% decrease in interaction with PIK3C2B. 65% decrease in interaction with PIK3C2B; when associated with F-1197. Abolishes interaction with PIK3C2B; when associated with F-1197 and F-1092.
+P00533	Q|1066-1067|G	No effect on interaction with CBLC.
+P00533	R|1067-1068|G	Strongly decreases interaction with CBLC.
+P00533	Y|1068-1069|F	Abolishes interaction with CBLC.
+P00533	Y|1091-1092|F	No change in interaction with PIK3C2B. Abolishes interaction with PIK3C2B; when associated with F-1197 and F-1016.
+P00533	Y|1109-1110|F	No change in interaction with PIK3C2B.
+P00533	Y|1171-1172|F	No change in interaction with PIK3C2B.
+P00533	Y|1196-1197|F	No change in interaction with PIK3C2B. 65% decrease in interaction with PIK3C2B; when associated with F-1016. Abolishes interaction with PIK3C2B; when associated with F-1092 and F-1016.
+Q02248	M|7-8|P	Loss of interaction with VCL.
+Q02248	S|32-33|A	Abolished HIPK2-mediated proteasomal degradation.
+Q02248	S|36-37|A	Abolished HIPK2-mediated proteasomal degradation.
+Q02248	S|551-552|A	Abolishes AMPK-mediated phosphorylation.
+P35222	S|28-29|F	No effect.
+P35222	Y|63-64|F	Abolishes phosphorylation by PTK6.
+P35222	Y|141-142|E	No effect on interaction with BCL9 and BCL9L.
+P35222	L|155-156|A	Abolishes interaction with BCL9 but no effect on interaction with CDH3; when associated with A-159.
+P35222	L|158-159|A	No effect on interaction with BCL9 and CDH3. Abolishes interaction with BCL9 but no effect on interaction with CDH3; when associated with A-156.
+P35222	L|177-178|A	No effect on interaction with BCL9 and CDH3.
+P35222	F|252-253|A	Abolishes or strongly reduces AXIN2 binding.
+P35222	H|259-260|A	Abolishes or strongly reduces AXIN1 and AXIN2 binding. Strongly reduces phosphorylation and degradation; when associated with A-386 and A-383.
+P35222	K|291-292|A	Abolishes or strongly reduces AXIN1 and AXIN2 binding.
+P35222	K|311-312|E	Abolishes TCF7L2 binding.
+P35222	K|344-345|A	Abolishes APC binding.
+P35222	W|382-383|A	Abolishes APC binding. Strongly reduces phosphorylation and degradation; when associated with A-260 and A-386.
+P35222	R|385-386|A	Strongly reduces APC binding. Strongly reduces phosphorylation and degradation; when associated with A-260 and A-383.
+P35222	N|425-426|A	Abolishes TCF7L2 and LEF1 binding.
+P35222	K|434-435|A	Strongly reduces or abolishes LEF1 binding.
+P35222	K|434-435|E	Abolishes TCF7L2 binding.
+P35222	R|468-469|A	Abolishes TCF7L2 binding, and strongly reduces or abolishes LEF1 binding.
+P35222	H|469-470|A	Abolishes TCF7L2 binding, and strongly reduces or abolishes LEF1 binding.
+P35222	K|507-508|A	Abolishes TCF7L2 and LEF1 binding.
+P35222	Y|653-654|E	Enhances TBP binding and transactivation of target genes.
+P35222	Y|653-654|F	Abolishes increase of TBP binding after phosphorylation by CSK.
+P35222	F|659-660|A	Abolishes CTNNBIP1 binding; when associated with A-661.
+P35222	R|660-661|A	Abolishes CTNNBIP1 binding; when associated with A-660.
+Q5S007	T|1342-1343|G	Decreased kinase activity; when associated with Q-1398.
+Q5S007	R|1397-1398|Q	Decreased kinase activity; when associated with G-1343.
+P10275	S|82-83|A	Reduced cell growth.
+P10275	Y|224-225|F	Decrease of CSK-induced phosphorylation.
+P10275	Y|268-269|F	Decrease of CSK-induced phosphorylation and phosphorylation by TNK2. Complete loss of TNK2-dependent phosphorylation; when associated with F-365.
+P10275	Y|308-309|F	Decrease of CSK-induced phosphorylation.
+P10275	Y|347-348|F	Decrease of CSK-induced phosphorylation.
+P10275	Y|358-359|F	Decrease of CSK-induced phosphorylation.
+P10275	Y|363-364|F	Decrease of CSK-induced phosphorylation.
+P10275	Y|364-365|F	Decrease of CSK-induced phosphorylation and phosphorylation by TNK2. Complete loss of TNK2-dependent phosphorylation; when associated with F-269.
+P10275	Y|394-395|F	Decrease of CSK-induced phosphorylation.
+P10275	Y|534-535|F	Greatest decrease of CSK-induced phosphorylation and inhibition of transcriptional activity induced by EGF.
+P10275	Y|551-552|F	Decrease in CSK-induced phosphorylation.
+P10275	L|701-702|A	Alters receptor specificity, so that transcription is activated by the antiandrogen cyproterone acetate.
+P10275	K|720-721|A	Loss of transcription activation in the presence of androgen and of interaction with NCOA2.
+P10275	W|741-742|L	Strongly decreased transcription activation in the presence of androgen.
+P10275	K|845-846|R	Prevents ubiquitination by RNF6. Prevents AR transcriptional activation by RNF14 in absence of hormone.
+P10275	K|847-848|R	Partially prevents ubiquitination by RNF6.
+P10275	E|897-898|Q	Reduced transcription activation in the presence of androgen.
+P10275	E|897-898|R	Loss of transcription activation in the presence of androgen.
+P10275	Y|915-916|F	Decrease in CSK-induced phosphorylation.
+Q8WZ42	K|32206-32207|A	Disrupts catalytic activity.
+Q8WZ42	Y|32340-32341|E	No phosphorylation on tyrosine.
+Q62226	C|24-25|S	Strongly reduces effects of in vivo overexpression; impairs multimer formation; does not affect subcellular location to lipid rafts. Homozygous mice are characterized by a smaller size and holoprosencephaly at E10.5, and shortening of limbs at E13.5. They die soon after birth.
+Q62226	G|31-32|R	Introduces a cleavage site for a furin-like protease resulting in abnormal protein processing; cleavage at this site removes 11 amino acids from the N-terminal domain and reduces affinity of Shh for Ptch1 and signaling potency in assays using chicken embryo neural plate explants and mouse C3H10T1/2 stem cells.
+Q62226	D|88-89|V	Moderately reduces Ptch1 binding in vitro and signaling potency in chicken embryo neural plate explant assays compared with wild-type sequence.
+Q62226	Q|100-101|H	Does not affect signaling activity in any of Shh signaling assays and causes no apparent defects in cholesterol-mediated autoprocessing reactions.
+Q62226	N|115-116|K	Shows no change in activities at different temperatures.
+Q62226	W|117-118|G	Causes a failure of Shh processing leading to retention of the immature glycosylated protein within the endoplasmic reticulum of transfected cells; causes a temperature-dependent conformational change that allows Shh to bind Ptch1 at 4 or 32 degrees Celsius but not at 37 degrees Celsius; drastically reduces signaling potency in chicken embryo neural plate explant assays.
+Q62226	W|117-118|R	Causes a failure of Shh processing leading to retention of the immature glycosylated protein within the endoplasmic reticulum of transfected cells; causes a temperature-dependent conformational change that allows Shh to bind Ptch1 at 4 or 32 degrees Celsius but not at 37 degrees Celsius; drastically reduces signaling potency in chicken embryo neural plate explant assays.
+Q62226	E|188-189|Q	Does not affect signaling activity in any of Shh signaling assays and causes no apparent defects in cholesterol-mediated autoprocessing reactions.
+Q01705	S|64-65|A	No effect.
+Q01705	S|145-146|A	No effect.
+Q01705	S|340-341|A	No effect.
+Q01705	S|377-378|A	No effect.
+Q01705	S|457-458|A	No effect.
+Q01705	S|495-496|A	No effect.
+Q01705	S|533-534|A	No effect.
+Q01705	S|608-609|A	No effect.
+Q01705	S|646-647|A	No effect.
+Q01705	S|721-722|A	No effect.
+Q01705	S|758-759|A	No effect.
+Q01705	S|796-797|A	No effect.
+Q01705	S|950-951|A	No effect.
+Q01705	S|1026-1027|A	No effect.
+Q01705	S|1064-1065|A	Reduced activity.
+Q01705	S|1188-1189|A	No effect.
+Q01705	S|1272-1273|A	No effect.
+Q01705	RQRR|1650-1654|AAAA	Processing by furin-like convertase abolished.
+Q01705	V|1743-1744|L	NICD processing severely reduced.
+Q01705	N|1944-1945|A	Reduced ability to promote HIF1AN-dependent 2-oxoglutarate decarboxylation and greatly reduced transactivation capacity. Abolished ability to promote HIF1AN-dependent 2-oxoglutarate decarboxylation; when associated with G-2012. Almost abolished transactivation capacity; when associated with A-2012.
+Q01705	N|2011-2012|A	Slightly reduced ability to promote HIF1AN-dependent 2-oxoglutarate decarboxylation. Abolished ability to promote HIF1AN-dependent 2-oxoglutarate decarboxylation and almost abolished transactivation capacity; when associated with A-1945.
+Q01705	N|2011-2012|G	Reduced ability to promote HIF1AN-dependent 2-oxoglutarate decarboxylation. Abolished ability to promote HIF1AN-dependent 2-oxoglutarate decarboxylation; when associated with A-1945.
+P38398	I|25-26|A	Disrupts the interaction with E2 enzymes, thereby abolishing the E3 ubiquitin-protein ligase activity.
+P38398	I|25-26|E	No ubiquitination of RBBP8. No restoration RBBP8-mediated focus formation or G2/M checkpoint control upon DNA damage.
+P38398	R|70-71|G	No effect on interaction with BAP1.
+P38398	S|307-308|N	Abolishes phosphorylation by AURKA and interferes with cell cycle progression from G2 to mitosis.
+P38398	S|1142-1143|A	Reduces in vitro phosphorylation by ATR.
+P38398	S|1238-1239|A	No effect on in vitro phosphorylation by ATR.
+P38398	S|1279-1280|A	Reduces in vitro phosphorylation by ATR.
+P38398	S|1297-1298|A	No effect on in vitro phosphorylation by ATR.
+P38398	S|1329-1330|A	No effect on in vitro phosphorylation by ATR.
+P38398	S|1386-1387|A	Loss of IR-induced S-phase checkpoint. Reduces in vitro phosphorylation by ATR.
+P38398	T|1393-1394|A	Reduces in vitro phosphorylation by ATR.
+P38398	S|1422-1423|A	Inhibition of the infrared-induced G2 arrest. Reduces phosphorylation by ATR.
+P38398	S|1456-1457|A	Reduces in vitro phosphorylation by ATR.
+P38398	S|1465-1466|A	No effect on in vitro phosphorylation by ATR.
+P38398	S|1523-1524|A	No change in infrared S-phase delay; when associated with A-1387. No effect on in vitro phosphorylation by ATR.
+P38398	S|1654-1655|A	Abolishes interaction with BRIP1.
+P38398	G|1655-1656|D	No effect on affinity for a BRIP1 phosphopeptide.
+P38398	F|1661-1662|S	Does not abolish FAM175A binding, but abolishes formation of a heterotetramer with FAM175A.
+P38398	M|1662-1663|K	Does not abolish FAM175A binding, but abolishes formation of a heterotetramer with FAM175A.
+P38398	Y|1665-1666|A	Does not abolish FAM175A binding, but impairs formation of a heterotetramer with FAM175A.
+P38398	R|1669-1670|E	Impairs formation of a heterotetramer with FAM175A.
+P38398	K|1670-1671|E	Impairs formation of a heterotetramer with FAM175A.
+P38398	T|1699-1700|A	Strongly reduces affinity for a BRIP1 phosphopeptide.
+P38398	K|1701-1702|M	Abolishes interaction with BRIP1.
+P38398	G|1737-1738|E	Abolishes interaction with BRIP1.
+P38398	S|1754-1755|A	No effect on in vitro phosphorylation by ATR.
+P38398	R|1834-1835|P	Mildly reduces affinity for a BRIP1 phosphopeptide.
+P38398	E|1835-1836|K	Slightly reduces affinity for a BRIP1 phosphopeptide.
+Q08379	R|17-18|K	Impaired methylation; when associated with R-30 and R-35.
+Q08379	KKKLREYQQRNSPGVPTGAKKKKK|25-49|AAALAEYQQANSPGVPTGAAAAAA	Abolishes interaction with importin-alpha.
+Q08379	R|29-30|K	Impaired methylation; when associated with R-18 and R-35.
+Q08379	R|34-35|K	Impaired methylation; when associated with R-18 and R-35.
+Q08379	S|36-37|D	Phosphomimetic mutant. Does not affect interaction with importin-alpha.
+Q96EB6	S|26-27|A	Greatly diminishes phosphorylation by MAPK8; when associated with A-47 and A-530.
+Q96EB6	S|46-47|A	Blocks residue phosphorylation, restores deacetylation activity and inhibits DNA damage-induced apoptosis.
+Q96EB6	S|46-47|A	Greatly diminishes phosphorylation by MAPK8; when associated with A-27 and A-530.
+Q96EB6	K|232-233|R	Impairs in vitro methylation by SETD7; when associated with R-235, R-236 and R-238.
+Q96EB6	K|234-235|R	Impairs in vitro methylation by SETD7; when associated with R-233, R-236 and R-238.
+Q96EB6	K|235-236|R	Impairs in vitro methylation by SETD7; when associated with R-233, R-235 and R-238.
+Q96EB6	K|237-238|R	Impairs in vitro methylation by SETD7; when associated with R-233, R-235a and R-236.
+Q96EB6	II|255-257|KK	Loss of interaction with the sumoylated form of CCAR2. No effect on its deacetylation activity.
+Q96EB6	H|362-363|Y	Loss of function. Reduces the interaction with CCAR2 and APEX1. Increases acetylation of APEX1.
+Q96EB6	F|473-474|A	Abolishes phosphorylation at Ser-47, restores deacetylation activity and inhibits DNA damage-induced apoptosis.
+Q96EB6	T|529-530|A	Greatly diminishes phosphorylation by MAPK8; when associated with A-27 and A-47.
+Q96EB6	T|529-530|A	Reduces in vitro phosphorylation by CDK1. Impairs cell proliferation and cell cycle progression; when associated with A-540.
+Q96EB6	S|539-540|A	Reduces in vitro phosphorylation by CDK1. Impairs cell proliferation and cell cycle progression; when associated with A-530.
+Q96EB6	S|658-659|A	Reduces in vitro phosphorylation by CaMK2; when associated with S-661. Greatly reduces in vivo phosphorylation; when associated with A-661.
+Q96EB6	S|660-661|A	Reduces in vitro phosphorylation by CaMK2; when associated with S-659. Greatly reduces in vivo phosphorylation; when associated with A-659.
+Q96EB6	S|683-684|A	No effect on phosphorylation (in vitro and in vivo).
+P51787	S|26-27|A	No phosphorylation by PKA. Decreases delayed rectifier potassium channel activity.
+P51787	V|323-324|L	Has a voltage-gated potassium channel activity. Inhibition of voltage-gated potassium channel activity by KCNE4.
+P51787	K|325-326|R	Has a voltage-gated potassium channel activity. Disrupts KCNE4-mediated voltage-gated potassium channel activity inhibition.
+P51787	T|326-327|V	Has a voltage-gated potassium channel activity. Disrupts KCNE4-mediated voltage-gated potassium channel activity inhibition.
+P51787	I|327-328|L	Has a voltage-gated potassium channel activity. Inhibition of voltage-gated potassium channel activity by KCNE4.
+P51787	S|337-338|C	Inhibits voltage-gated potassium channel activity.
+P51787	F|339-340|C	Inhibits voltage-gated potassium channel activity.
+P51787	G|588-589|M	No effect.
+P51787	A|589-590|W	Reduced cell surface expression and strongly reduced potassium current.
+P51787	N|592-593|G	Reduced cell surface expression and moderately reduced potassium current.
+P51787	L|601-602|A	Does not interact with AKAP9 and the targeting protein kinase A (PKA) catalytic subunit and protein phosphatase 1 (PP1); when associated with I-609.
+P51787	I|608-609|A	Does not interact with AKAP9 and the kinase A (PKA) catalytic subunit and protein phosphatase 1 (PP1); when associated with L-602.
+P60484	M|0-1|I	Expression is restricted to isoform alpha.
+P60484	K|12-13|E	Nuclear. Cytoplasmic; when associated with E-289. Shows less tumor suppressive ability; when associated with E-289.
+P60484	D|91-92|A	700-fold reduction in phosphatase activity towards PtdIns(3,4,5)P3. Loss of protein phosphatase activity. Unable to inhibit focal adhesion formation.
+P60484	H|92-93|A	75% reduction in phosphatase activity towards PtdIns(3,4,5)P3. Modest reduction in phosphatase activity towards PtdIns(3,4)P2.
+P60484	C|123-124|A	Loss of protein phosphatase activity. Unable to inhibit focal adhesion formation.
+P60484	K|124-125|M	Reduced phosphatase activity towards PtdIns(3,4,5)P3, PtdIns(3,4)P2 and PtdIns(3)P.
+P60484	A|125-126|P	Does not reduce phosphatase activity towards PtdIns(3,4,5)P3 and PtdIns(3,4)P2.
+P60484	A|125-126|S	Does not reduce phosphatase activity towards PtdIns(3,4,5)P3 and PtdIns(3,4)P2.
+P60484	A|125-126|V	Does not reduce phosphatase activity towards PtdIns(3,4,5)P3 and PtdIns(3,4)P2.
+P60484	K|127-128|M	85% reduction in phosphatase activity towards PtdIns(3,4,5)P3.
+P60484	K|127-128|R	Does not reduce phosphatase activity towards PtdIns(3,4,5)P3.
+P60484	R|129-130|M	Does not affect the ability to inhibit AKT/PKB activation.
+P60484	T|166-167|D	60% reduction in phosphatase activity towards PtdIns(3,4,5)P3.
+P60484	Q|170-171|E	75% reduction in phosphatase activity towards PtdIns(3,4,5)P3.
+P60484	KMLKKDK|262-269|AAGAADA	Reduces the growth suppression activity and cells show anchorage-independent growth. Reduces binding to phospholipid membranes in vitro. Phosphatase activity towards PtdIns(3,4,5)P3 is not affected.
+P60484	K|288-289|E	Cytoplasmic; when associated with E-13. Shows less tumor suppressive ability; when associated with E-13.
+P60484	KANKDKANR|326-335|AAGADAANA	Reduces growth suppression activity and promotes anchorage-independent growth. Reduces binding to phospholipid membranes in vitro; phosphatase activity towards PtdIns(3,4,5)P3 is not affected.
+P60484	Y|335-336|F	Significantly lower phosphatase activity, reduced protein stability and decreased growth-inhibitory effect.
+P60484	T|365-366|A	Decreased stability.
+P60484	S|369-370|A	Decreased stability.
+P60484	T|400-401|A	Loss of DLG1-binding. No effect on MAGI2- and MAST2-binding.
+P60484	K|401-402|A	No effect on MAGI2-, MAST2- and DLG1-binding.
+P60484	K|401-402|W	Loss of DLG1-, MAGI2-, MAGI3- and MAST2-binding. Decrease of protein stability.
+P60484	V|402-403|A	Loss of DLG1-, MAGI2-, MAGI3-, MAST1-, MAST2- and MAST3-binding.
+P31749	K|7-8|R	Substantial reduction of ubiquitination, phosphorylation at T-308 and S-473, AKT activation as well as IGF1-induced membrane recruitment. Decrease in ubiquitination and phosphorylation at T-308 as well as impaired association with the membrane; when associated with K-17.
+P31749	K|13-14|A	Impairs interaction with PtdIns(3,4,5)P3 and PtdIns(3,4)P2.
+P31749	K|13-14|Q	Substantial reduction of phosphorylation at T-308 and S-473, loss of AKT activation, and loss of binding to PIP3 as well as IGF1-induced membrane recruitment.
+P31749	K|13-14|R	Substantial reduction of ubiquitination, phosphorylation at T-308 and S-473, AKT activation, loss of binding to PIP3 as well as IGF1-induced membrane recruitment.
+P31749	E|16-17|K	No effect on membrane localization. Loss of membrane localization; when associated with Q-20.
+P31749	K|19-20|Q	Substantial reduction of phosphorylation at T-308 and S-473, reduced AKT activation, and reduced binding to PIP3 as well as IGF1-induced membrane recruitment. Loss of membrane localization; when associated with K-17.
+P31749	K|19-20|R	Slight increase of phosphorylation at T-308 and S-473.
+P31749	R|24-25|C	Impairs interaction with PtdIns(3,4,5)P3 and PtdIns(3,4)P2.
+P31749	R|85-86|A	Impairs interaction with PtdIns(3,4,5)P3 and PtdIns(3,4)P2.
+P31749	Y|175-176|F	Significant loss of interaction with TNK2. Loss of membrane localization. Significant reduction in phosphorylation on Ser-473.
+P31749	T|304-305|A	Reduces O-GlcNAc levels; Reduces O-GlcNAc levels even more; when associated with A-312.
+P31749	T|304-305|Y	Abolishes phosphorylation at Thr-308.
+P31749	T|307-308|D	5-fold activation and 18-fold activation; when associated with D-473.
+P31749	T|311-312|A	Reduces O-GlcNAc levels; Reduces O-GlcNAc levels even more; when associated with A-305.
+P31749	T|311-312|Y	Abolishes phosphorylation at Thr-308.
+P31749	S|472-473|D	7-fold activation and 25-fold activation; when associated with D-308.
+P31749	Y|473-474|F	55% inhibition of activation.
+O60260	S|64-65|E	Phosphomimetic mutant; still requires PINK1 for activation. PARK2 is activated in presence of phosphorylated ubiquitin.
+O60260	C|331-332|S	Impairs folding of IBR domain.
+O60260	C|336-337|A	Impairs the ability to ubiquitinate SNCAIP.
+O60260	C|364-365|S	Impairs protein folding.
+O60260	W|402-403|A	Decreased autoinhibition and increased E3 activity.
+O60260	C|420-421|A	Impairs the ability of self-ubiquitination and to ubiquitinate SNCAIP.
+O60260	C|430-431|S	Impairs the ability to ubiquitinate target proteins.
+O60260	H|432-433|A	Impaired activity.
+O60260	E|443-444|A	Impaired activity.
+P05067	KRGR|98-102|NQGG	Reduced heparin-binding.
+P05067	H|136-137|N	Binds copper. Forms dimer.
+P05067	M|140-141|T	Binds copper. Forms dimer.
+P05067	C|143-144|S	Binds copper. No dimer formation. No copper reducing activity.
+P05067	HLH|146-149|ALA	50% decrease in copper reducing activity.
+P05067	H|146-147|A	Some decrease in copper reducing activity.
+P05067	H|146-147|N	Binds copper. Forms dimer.
+P05067	H|146-147|Y	Greatly reduced copper-mediated low-density lipoprotein oxidation.
+P05067	H|150-151|K	Greatly reduced copper-mediated low-density lipoprotein oxidation.
+P05067	H|150-151|N	Binds copper. Forms dimer.
+P05067	S|197-198|A	Greatly reduced casein kinase phosphorylation.
+P05067	S|205-206|A	Reduced casein kinase phosphorylation.
+P05067	R|498-499|A	Reduced affinity for heparin; when associated with A-503.
+P05067	K|502-503|A	Reduced affinity for heparin; when associated with A-499.
+P05067	S|655-656|A	Abolishes chondroitin sulfate binding in L-APP733 isoform.
+P05067	R|675-676|G	60-70% zinc-induced beta-APP (28) peptide aggregation.
+P05067	Y|680-681|F	60-70% zinc-induced beta-APP (28) peptide aggregation.
+P05067	H|683-684|R	Only 23% zinc-induced beta-APP (28) peptide aggregation.
+P05067	G|703-704|V	Reduced protein oxidation. No hippocampal neuron toxicity.
+P05067	M|705-706|L	Reduced lipid peroxidation inhibition.
+P05067	M|705-706|V	No free radical production. No hippocampal neuron toxicity.
+P05067	V|716-717|S	Unchanged beta-APP42/total APP-beta ratio.
+P05067	V|716-717|I	Increased beta-APP42/beta-APP40 ratio.
+P05067	V|716-717|K	Decreased beta-APP42/total APP-beta ratio.
+P05067	V|716-717|M	Increased beta-APP42/beta-APP40 ratio. No change in apoptosis after caspase cleavage.
+P05067	Y|727-728|A	No effect on APBA1 nor APBB1 binding. Greatly reduces the binding to APPBP2. APP internalization unchanged. No change in beta-APP42 secretion.
+P05067	D|738-739|A	No cleavage by caspases during apoptosis.
+P05067	D|738-739|N	No effect on FADD-induced apoptosis.
+P05067	T|742-743|A	Greatly reduces the binding to SHC1 and APBB family members; no effect on NGF-stimulated neurite extension.
+P05067	T|742-743|E	Reduced NGF-stimulated neurite extension. No effect on APP maturation.
+P05067	G|755-756|A	APP internalization unchanged. No change in beta-APP42 secretion.
+P05067	Y|756-757|A	Little APP internalization. Reduced beta-APP42 secretion.
+P05067	Y|756-757|G	Loss of binding to MAPK8IP1, APBA1, APBB1, APPBP2 and SHC1.
+P05067	N|758-759|A	No binding to APBA1, no effect on APBB1 binding. Little APP internalization. Reduced beta-APP42 secretion.
+P05067	P|759-760|A	Little APP internalization. Reduced beta-APP42 secretion.
+P05067	Y|761-762|A	Loss of binding to APBA1 and APBB1. APP internalization unchanged. No change in beta-APP42 secretion.
+Q12809	F|28-29|A	Slows down deactivation.
+Q12809	Y|42-43|A	Slows down deactivation.
+Q12809	S|282-283|A	Abolishes phosphorylation; when associated with A-890; A-895 and A-1137.
+Q12809	N|597-598|Q	No effect on cell surface expression, but changes inactivation kinetics; when associated with A-631.
+Q12809	N|628-629|Q	Abolishes cell surface expression; has no effect on N-glycosylation.
+Q12809	S|630-631|A	No effect on cell surface expression, but changes inactivation kinetics; when associated with Q-598.
+Q12809	S|889-890|A	Abolishes phosphorylation; when associated with A-283; A-895 and A-1137.
+Q12809	T|894-895|A	Abolishes phosphorylation; when associated with A-283; A-890 and A-1137.
+Q12809	S|1136-1137|A	Abolishes phosphorylation; when associated with A-283; A-890 and A-895.
+P22725	C|103-104|A	No effect on secretion.
+P22725	N|113-114|Q	Abolishes glycosylation; when associated with Q-120, Q-312 and Q-326.
+P22725	N|119-120|Q	Abolishes glycosylation; when associated with Q-114, Q-312 and Q-326.
+P22725	N|311-312|Q	Abolishes glycosylation; when associated with Q-114, Q-120 and Q-326.
+P22725	N|325-326|Q	Abolishes glycosylation; when associated with Q-114, Q-120 and Q-312.
+P21802	N|264-265|Q	Reduced N-glycosylation. Reduced expression at the cell surface.
+P21802	N|548-549|T	Constitutive kinase activity.
+P21802	E|564-565|A	Constitutive kinase activity.
+P21802	None|655-657|None	Loss of kinase activity.
+P21802	Y|768-769|F	Increases fibroblast proliferation. Decreases phosphorylation of PLCG1 and FRS2. Decreases activation of MAP kinases.
+P10417	S|69-70|A	Loss of phosphorylation. Unable to suppress apoptosis.
+P35670	S|652-653|E	Altered copper-induced relocalization.
+P35670	D|1026-1027|A	Loss of copper transport activity.
+P35670	T|1030-1031|S	Decreased copper transport activity with no effect on ATPase activity.
+P35670	H|1068-1069|C	Loss of ATPase activity. Cannot form an acylphosphate intermediate during catalysis. Does not alter folding of the nucleotide-binding domain.
+P49768	None|65-72|None	No effect on interaction with GFAP.
+P49768	KY|75-77|AA	No effect on interaction with GFAP.
+P49768	VI|81-83|EE	Loss of interaction with GFAP.
+P49768	V|81-82|E	Loss of interaction with GFAP.
+P49768	ML|83-85|EE	Loss of interaction with GFAP.
+P49768	Y|255-256|F	Alters gamma-secretase cleavage specificity. Increased production of amyloid beta(42). No effect on enzymatic activity.
+P49768	D|256-257|A	Loss of endoproteolytic cleavage; reduces production of amyloid beta in APP processing and of NICD in NOTCH1 processing.
+P49768	D|256-257|E	Abolishes gamma-secretase activity. Reduces production of amyloid beta in APP processing. Accumulation of full-length PS1. Loss of binding of transition state analog gamma-secretase inhibitor.
+P49768	L|285-286|W	Increases production of amyloid beta in APP processing.
+P49768	L|285-286|R	Reduces production of NICD in NOTCH1 processing.
+P49768	M|291-292|D	Loss of endoproteolytic cleavage.
+P49768	S|309-310|A	Abolishes PKA-mediated phosphorylation; no effect on caspase-mediated cleavage.
+P49768	D|344-345|N	Abolishes caspase cleavage.
+P49768	S|345-346|A	Abolishes PKC-mediated phosphorylation; no effect on PKA-mediated phosphorylation.
+P49768	S|345-346|E	Inhibits caspase-mediated cleavage. Modulates progression of apoptosis.
+P49768	D|372-373|N	No effect on caspase cleavage.
+P49768	D|384-385|A	Loss of endoproteolytic cleavage. Reduces production of amyloid beta in APP processing. Disassembly of the N-cadherin/PS1 complex at the cell surface. Impairs CDH2 processing.
+P49768	D|384-385|E	Abolishes gamma-secretase activity. Reduces production of amyloid beta in APP processing. Accumulation of full-length PS1. Loss of binding of transition state analog gamma-secretase inhibitor.
+P49768	D|384-385|N	No effect on caspase cleavage.
+P49768	Y|388-389|F	Alters gamma-secretase cleavage specificity. Increased production of amyloid beta(42). No effect on enzymatic activity.
+P49768	P|432-433|A	No effect on endoproteolytic cleavage. No effect on APP nor NOTCH1 processing. Slightly increased Abeta42/Abeta40 ratio.
+P49768	P|432-433|V	No endoproteolytic cleavage; no APP nor NOTCH1 processing. No detectable Abetano detectable Abeta.
+P49768	P|432-433|G	Very little endoproteolysis. Little APP processing. No NOTCH1 processing. Very low levels Abeta40 and no detectable Abeta42.
+P49768	A|433-434|C	Some loss of endoproteolytic cleavage. Some loss of APP and NOTCH1 processing. Six-fold increase in Abeta42/Abeta40 ratio.
+P49768	A|433-434|V	No endoproteolytic cleavage. No APP nor NOTCH1 processing. No detectable Abeta.
+P49768	A|433-434|G	No effect on endoproteolytic cleavage. No effect on APP nor NOTCH1 processing. Reduced Abeta42/Abeta40 ratio.
+P49768	L|434-435|A	No effect on endoproteolytic cleavage. No effect on APP processing. Impaired NOTCH1 processing. Greatly reduced Abeta42/Abeta40 ratio.
+P49768	L|434-435|G	Greatly reduced endoproteolytic cleavage. Very little APP and NOTCH1 processing. Very low levels of Abeta40 and no detectable Abeta42.
+P49768	L|434-435|I	No effect on endoproteolytic cleavage. No effect on APP nor NOTCH1 processing.
+P49768	L|434-435|V	No effect on endoproteolytic cleavage. No effect on APP processing. Impaired NOTCH1 processing. Some increase in Abeta42/Abeta40 ratio.
+P11362	K|513-514|A	Loss of kinase activity.
+P11362	R|576-577|E	Strongly reduced autophosphorylation in response to FGF signaling. No effect on in vitro kinase activity.
+P11362	R|608-609|V	Abolishes interaction with PLCG1.
+P11362	D|622-623|A	Loss of kinase activity.
+P11362	Y|652-653|F	No effect on kinase activity. Loss of autophosphorylation and kinase activity; when associated with F-654.
+P11362	Y|653-654|F	Reduced kinase activity. Loss of autophosphorylation and kinase activity; when associated with F-653.
+P11362	D|754-755|V	Abolishes interaction with PLCG1.
+P11362	Y|765-766|F	Abolishes interaction with PLCG1 and SHB. Decreases phosphorylation of FRS2, activation of RAS and MAP kinase signaling and stimulation of cell proliferation.
+P11171	T|59-60|A	Loss of CDK1-mediated phosphorylation. Abolishes targeting onto the mitotic spindle; when associated with A-712.
+P11171	S|711-712|A	Loss of CDK1-mediated phosphorylation. Abolishes targeting onto the mitotic spindle; when associated with A-60.
+P70445	T|36-37|A	Impaired hyperphosphorylation.
+P70445	T|45-46|A	Impaired hyperphosphorylation.
+P70445	T|69-70|A	Does not greatlay affect hyperphosphorylation.
+P70445	NNLN|98-102|ANLA	Abolishes deamidation and impaired interaction with RPTOR.
+P70445	NNLN|98-102|DNLD	Increased interaction with RPTOR.
+P70445	None|115-120|None	Abolishes interaction with RPTOR.
+P08909	S|457-458|D	Loss of interaction with MPDZ.
+P08909	S|458-459|D	No effect on interaction with MPDZ.
+P05623	RK|25-27|QQ	Abolishes cleavage from sperm and prevents release of C-terminal fragment for long-term PMR. Short-term PMR in unaffected.
+P05623	W|41-42|A	Complete loss of activity; when associated with A-51. Complete loss of activity; when associated with A-43; A-51 and A-55.
+P05623	C|42-43|A	Complete loss of activity; when associated with A-42; A-51 and A-55.
+P05623	W|50-51|A	Complete loss of activity; when associated with A-42. Complete loss of activity; when associated with A-42; A-43 and A-55.
+P05623	C|54-55|A	Complete loss of activity; when associated with A-42; A-43 and A-51.
+Q9UNQ0	K|85-86|M	Inactive and altered subcellular location.
+Q9UNQ0	N|417-418|Q	No effect.
+Q9UNQ0	R|481-482|D	Decreases ATPase activity.
+Q9UNQ0	R|481-482|T	Increases ATPase activity.
+Q9UNQ0	R|481-482|Y	No change in ATPase activity.
+Q9UNQ0	R|481-482|Y	Decreases transport activity.
+Q9UNQ0	N|556-557|Q	No effect.
+Q9UNQ0	H|582-583|A	Strongly reduced binding to hemin but not to PPIX.
+Q9UNQ0	N|595-596|Q	Loss of glycosylation.
+Q9UNQ0	C|602-603|A	Strongly reduced binding to hemin but not to PPIX.
+Q9UNQ0	Y|604-605|A	No effect on hemin binding.
+P47855	H|60-61|A	None or little editing activity.
+P47855	H|60-61|C	Retains most editing activity.
+P47855	V|61-62|A	Retains most editing activity.
+P47855	E|62-63|A	None or little editing activity.
+P47855	P|91-92|A	Retains most editing activity.
+P47855	C|92-93|A	None or little editing activity.
+P47855	C|95-96|A	None or little editing activity.
+Q9BYF1	QAK|23-26|KAE	Slightly inhibits interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	K|30-31|D	Abolishes interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	E|36-37|A	No effect on interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	D|37-38|A	No effect on interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	Y|40-41|A	Strongly inhibits interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	K|67-68|D	Slightly inhibits interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	MYP|81-84|NFS	Inhibits interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	E|109-110|P	No effect on interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	PD|134-136|SM	No effect on interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	E|159-160|R	No effect on interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	R|191-192|D	No effect on interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	R|218-219|D	No effect on interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	H|238-239|Q	No effect on interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	K|308-309|D	No effect on interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	E|311-312|A	No effect on interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	T|323-324|A	No effect on interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	NVQ|337-340|DDR	No effect on interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	D|349-350|A	No effect on interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	K|352-353|D	Abolishes interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	D|354-355|A	Strongly inhibits interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	R|356-357|A	Strongly inhibits interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	L|358-359|A	No effect on interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	M|382-383|A	Slightly inhibits interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	P|388-389|A	Slightly inhibits interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	R|392-393|A	Slightly inhibits interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	SPD|424-427|PSN	Slightly inhibits interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	KGE|464-467|QDK	No effect on interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	R|558-559|S	Slightly inhibits interaction with SARS-CoV spike glycoprotein.
+Q9BYF1	F|602-603|T	No effect on interaction with SARS-CoV spike glycoprotein.
+P25106	S|144-145|A	Does not result in CXCL12-inducible chemotaxis, calcium mobilization or ERK activation, and has no effect on CXCR7-mediated CXCL12 degradation; when associated with V-147.
+P25106	T|146-147|V	Does not result in CXCL12-inducible chemotaxis, calcium mobilization or ERK activation, and has no effect on CXCR7-mediated CXCL12 degradation; when associated with A-145.
+P08483	Y|147-148|A	Decreased affinity for acetylcholine.
+P08483	T|230-231|A	Decreased affinity for acetylcholine.
+P08483	T|233-234|A	Strongly decreased affinity for acetylcholine.
+P08483	Y|505-506|F	Decreased affinity for acetylcholine.
+P08483	Y|528-529|F	Decreased affinity for acetylcholine.
+P08483	Y|532-533|F	Decreased affinity for acetylcholine.
+Q8N1Q8	G|159-160|A	Strongly reduces enzyme activity. Abolishes enzyme activity; when associated with A-183.
+Q8N1Q8	D|166-167|A	Abolishes enzyme activity.
+Q8N1Q8	T|182-183|A	Reduces enzyme activity. Abolishes enzyme activity; when associated with A-160.
+O14734	H|77-78|A	Reduces Acyl-CoA thioesterase activity and peroxisome proliferation.
+P83967	None|356-376|None	In allele Act88F-ifm(3)7.
+Q10651	N|251-252|A	Reduced heparin binding.
+Q10651	H|253-254|A	Reduced heparin binding.
+Q10651	H|253-254|P	Reduced heparin binding.
+Q10651	D|347-348|C	Results in destabilized protein structure; when associated with C-368 and K-377.
+Q10651	S|367-368|C	Results in destabilized protein structure; when associated with C-348 and K-377.
+Q10651	R|373-374|A	Reduced heparin binding; when associated with A-378.
+Q10651	E|376-377|K	In yn32: Results in lethality and destabilized protein structure.
+Q10651	K|377-378|A	Reduced heparin binding; when associated with A-374.
+Q10651	H|381-382|A	Moderately reduced heparin binding.
+P80386	W|99-100|G	Abolishes glycogen-binding.
+P80386	W|99-100|L	Partially inhibits glycogen-binding.
+P80386	K|125-126|Q	Abolishes glycogen-binding.
+P80386	L|145-146|A	Significantly reduces glycogen-binding.
+P80386	N|149-150|K	Abolishes glycogen-binding.
+P80386	N|149-150|Q	Significantly reduces glycogen-binding.
+Q8BRK8	K|44-45|A	Loss of kinase activity.
+Q8BRK8	D|156-157|A	Loss of kinase activity.
+Q8WU67	S|219-220|A	Loss of phospholipase activity.
+Q4JIM5	Y|271-272|F	Minimal reduction in ability to autophosphorylate.
+Q4JIM5	K|316-317|M	Loss of kinase activity.
+Q4JIM5	Y|438-439|F	Partial reduction in ability to autophosphorylate.
+Q4JIM5	Y|567-568|F	No reduction in ability to autophosphorylate.
+Q4JIM5	Y|683-684|F	Minimal reduction in ability to autophosphorylate.
+Q15027	S|13-14|A	No effect on interaction with ITGB1.
+Q15027	S|28-29|A	No effect on interaction with ITGB1.
+Q15027	K|273-274|N	Loss of binding to PIP2 and PIP3. Loss of association with endosomal tubules when coexpressed with PIP5K1C.
+Q15027	S|276-277|A	No effect on interaction with ITGB1.
+Q15027	F|279-280|A	Reduced membrane binding and ability to induce liposome tubulation.
+Q15027	F|279-280|E	Almost abolishes membrane binding.
+Q15027	F|279-280|W	Preserves membrane binding and ability to tubulate liposomes.
+Q15027	T|288-289|A	No effect on interaction with ITGB1.
+Q15027	S|357-358|A	No effect on interaction with ITGB1.
+Q15027	T|388-389|A	No effect on interaction with ITGB1.
+Q15027	R|447-448|Q	Loss of GAP activity. No effect on GULP1 binding or association with endosomal tubules when coexpressed with PIP5K1C.
+Q15027	T|460-461|A	No effect on interaction with ITGB1.
+Q15027	S|553-554|A	Loss of phosphorylation by PKB, interaction with ITGB1 and ITGB1-dependent cell migration.
+Q15027	S|553-554|D	Enhances interaction with ITGB1.
+Q15027	S|567-568|A	No effect on interaction with ITGB1.
+Q15027	T|710-711|A	No effect on interaction with ITGB1.
+Q15027	Y|711-712|F	No effect on interaction with ITGB1.
+Q15027	S|723-724|A	Loss of phosphorylation at S-554, interaction with ITGB1 and ITGB1-dependent cell migration.
+Q15027	S|723-724|D	Enhances interaction with ITGB1.
+Q92035	M|100-101|Y	Increases peripheral site ligand binding.
+Q92035	K|315-316|D	Increases peripheral site ligand binding.
+P22303	D|205-206|N	Misfolding, absence of secretion.
+P22303	S|233-234|A	Loss of activity.
+P22303	E|364-365|A	Loss of activity.
+P22303	D|434-435|N	Misfolding, absence of secretion.
+P22303	H|477-478|A	Loss of activity.
+P22303	C|610-611|A	Impairment of interchain disulfide bridge formation.
+Q9NPJ3	N|49-50|A	Reduced activity.
+Q9NPJ3	H|55-56|A	Decreases affinity for substrate.
+Q9NPJ3	D|64-65|A	Loss of activity.
+Q9NPJ3	D|64-65|N	Reduced activity.
+Q9NPJ3	S|82-83|A	Reduced activity.
+P07308	H|118-119|A	Abolishes enzyme activity.
+P07308	H|123-124|A	Abolishes enzyme activity.
+P07308	H|155-156|A	Abolishes enzyme activity.
+P07308	R|156-157|N	No effect on enzyme activity.
+P07308	H|158-159|A	Abolishes enzyme activity.
+P07308	H|159-160|A	Abolishes enzyme activity.
+P07308	H|165-166|A	No effect on enzyme activity.
+P07308	H|169-170|A	No effect on enzyme activity; when associated with H-173.
+P07308	R|172-173|H	No effect on enzyme activity; when associated with A-170.
+P07308	H|296-297|A	Abolishes enzyme activity.
+P07308	H|299-300|A	Abolishes enzyme activity.
+P07308	H|300-301|A	Abolishes enzyme activity.
+P07308	H|314-315|A	No effect on enzyme activity.
+Q91Y80	S|352-353|A	Large decrease in phosphorylation by SAPK3.
+Q91Y80	S|422-423|A	Slight decrease in phosphorylation by SAPK3.
+P29266	D|67-68|R	Decrease of activity with NAD, increase of activity with NADP.
+P29266	K|207-208|R	Complete loss of activity.
+P29266	N|211-212|Q	Decrease in activity.
+Q13541	T|36-37|A	Abolishes phosphorylation by MTOR and increased ubiquitination by the BCR(KLHL25) complex; when associated with A-46; A-65 and A-70.
+Q13541	T|45-46|A	Abolishes phosphorylation by MTOR and increased ubiquitination by the BCR(KLHL25) complex; when associated with A-37; A-65 and A-70.
+Q13541	K|56-57|R	Impaired ubiquitination by the BCR(KLHL25) complex.
+Q13541	LM|58-60|AA	Abolishes eIF4E-binding. Increased ubiquitination by the BCR(KLHL25) complex.
+Q13541	S|64-65|A	Abolishes phosphorylation by MTOR and increased ubiquitination by the BCR(KLHL25) complex; when associated with A-37; A-46 and A-70.
+Q13541	K|68-69|R	Does not affect ubiquitination by the BCR(KLHL25) complex.
+Q13541	T|69-70|A	Abolishes phosphorylation by MTOR and increased ubiquitination by the BCR(KLHL25) complex; when associated with A-37; A-46 and A-65.
+Q13541	K|104-105|R	Does not affect ubiquitination by the BCR(KLHL25) complex.
+P10852	C|102-103|S	No effect on guidance of LAT1 to the plasma membrane.
+P46098	W|177-178|S	Abolished ligand binding to the heteromeric receptor.
+P46098	R|431-432|Q	Little effect on conductance. Massive increase of conductance; when associated with D-436 and A-440.
+P46098	R|435-436|D	Increased conductance. Massive increase of conductance; when associated with Q-432 and A-440.
+P46098	R|439-440|A	Increased conductance. Massive increase of conductance; when associated with Q-432 and D-436.
+O95264	N|51-52|S	Reduced molecular weight. Very little expression in the cell membrane.
+O95264	N|95-96|S	Reduced molecular weight. Very little expression in the cell membrane.
+O95264	N|137-138|S	Reduced molecular weight. Very little expression in the cell membrane.
+O95264	N|167-168|S	Reduced molecular weight and cell membrane expression.
+O95264	N|202-203|S	Reduced molecular weight. Very little expression in the cell membrane.
+P36639	F|67-68|A	Reduces 2-OH-dATPase and 8-oxo-dGTPase activities.
+P36639	G|76-77|R	Reduces activity by 97%.
+P36639	G|77-78|F	Loss of activity.
+P36639	V|79-80|E	Loss of activity.
+P36639	Q|80-81|P	Reduces activity by 97%.
+P36639	G|82-83|I	Reduces activity by 60%.
+P36639	I|85-86|K	Loss of activity.
+P36639	D|87-88|P	Loss of activity.
+P36639	G|88-89|M	Loss of activity.
+P36639	A|89-90|P	Loss of activity.
+P36639	L|93-94|P	Loss of activity.
+P36639	Q|94-95|P	Loss of activity.
+P36639	E|95-96|G	Loss of activity.
+P36639	E|96-97|Y	Loss of activity.
+P36639	S|97-98|R	Loss of activity.
+P36639	W|157-158|A	Greatly reduces or abolishes 2-OH-dATPase and 8-oxo-dGTPase activities.
+P36639	W|157-158|Y	Enhances 2-OH-dATPase activity and greatly reduces 8-oxo-dGTPase activity.
+P36639	D|159-160|N	Loss of 2-OH-dATPase activity, reduces 8-oxo-dGTPase activity.
+P36639	L|190-191|A	Reduces 2-OH-dATPase and 8-oxo-dGTPase activities and increases thermolability.
+P36639	None|191-197|None	Almost abolishes 2-OH-dATPase and 8-oxo-dGTPase activities and increases thermolability.
+P36639	R|191-192|A	Reduces 2-OH-dATPase and 8-oxo-dGTPase activities and increases thermolability.
+P36639	None|192-197|None	Greatly reduces 2-OH-dATPase and 8-oxo-dGTPase activities and increases thermolability.
+P36639	E|192-193|A	Reduces 2-OH-dATPase and 8-oxo-dGTPase activities and increases thermolability.
+P36639	None|193-197|None	Reduces 2-OH-dATPase and 8-oxo-dGTPase activities and increases thermolability.
+P36639	V|193-194|A	Reduces 2-OH-dATPase and 8-oxo-dGTPase activities and increases thermolability.
+P36639	None|194-197|None	Slightly enhances 2-OH-dATPase and 8-oxo-dGTPase activities and increases thermolability.
+P36639	D|194-195|A	Enhances 2-OH-dATPase and 8-oxo-dGTPase activities and increases thermolability.
+P36639	T|195-196|A	Reduces 2-OH-dATPase and 8-oxo-dGTPase activities and increases thermolability.
+P36639	V|196-197|A	Slightly reduces 2-OH-dATPase and 8-oxo-dGTPase activities and increases thermolability.
+Q676U5	E|225-226|R	Impairs interaction with WIPI2.
+Q676U5	E|229-230|R	Impairs interaction with WIPI2.
+Q676U5	D|298-299|E	Prevents cleavage by activated CASP3.
+Q02084	C|177-178|F	No effect on intranuclear localization.
+Q02084	C|201-202|F	No effect on intranuclear localization.
+Q02084	H|266-267|N	No Zn(2+) binding. Inhibits the targeting to lampbrush chromosome loops and to nucleoplasmic particles.
+P54619	D|89-90|A	Reduced AMP-activation of phosphorylation of PRKAA1 or PRKAA2. Reduced ADP activation of phosphorylation of PRKAA1 or PRKAA2.
+P54619	D|244-245|A	Reduced AMP-activation of phosphorylation of PRKAA1 or PRKAA2. Reduced ADP activation of phosphorylation of PRKAA1 or PRKAA2.
+P54619	D|316-317|A	Reduced AMP-activation of phosphorylation of PRKAA1 or PRKAA2. Does not affect ADP activation of phosphorylation of PRKAA1 or PRKAA2.
+Q13131	V|306-307|Q	Activates the kinase activity.
+Q9NUT2	GK|511-513|AR	Renders the protein unstable.
+Q9NP78	LL|135-137|AA	No effect on lysosomal localization.
+Q8R2Y0	S|147-148|A	Loss of the lipid hydrolase activity.
+Q9QZM5	Y|52-53|A	Not phosphorylated and perinuclear upon NMDA treatment.
+P00519	T|734-735|A	Abolishes phosphorylation. Loss of binding YWHAS and YWHAZ. Localizes to the nucleus. No effect on kinase activity.
+Q13085	S|77-78|A	No effect on interaction with BRCA1.
+Q13085	S|343-344|A	No effect on interaction with BRCA1.
+Q13085	S|431-432|A	No effect on interaction with BRCA1.
+Q13085	S|1200-1201|A	No effect on interaction with BRCA1.
+Q13085	S|1262-1263|A	Abolishes interaction with BRCA1.
+Q13085	S|1584-1585|A	No effect on interaction with BRCA1.
+Q13085	S|1951-1952|A	No effect on interaction with BRCA1.
+Q13085	S|2210-2211|A	No effect on interaction with BRCA1.
+E9Q4Z2	S|211-212|A	No phosphorylation by AMPK, reduced fatty acid oxidation in skeletal muscle, increased lipid deposition in skeletal muscle, and development of insulin resistance.
+P11310	L|85-86|M	Strongly reduced rate of electron transfer to ETF.
+P11310	L|97-98|W	Strongly reduced rate of electron transfer to ETF.
+P11310	L|99-100|Y	Strongly reduced rate of electron transfer to ETF.
+P11310	I|107-108|M	Strongly reduced rate of electron transfer to ETF.
+P11310	W|190-191|A	Loss of electron transfer to ETF.
+P11310	W|190-191|F	Reduces rate of electron transfer to ETF about six-fold.
+P11310	E|236-237|A	Strongly reduced rate of electron transfer to ETF.
+P11310	E|383-384|A	Reduces rate of electron transfer to ETF three-fold.
+P11310	E|383-384|Q	Reduces rate of electron transfer to ETF two-fold.
+Q9XWZ2	E|90-91|K	In n5655; suppresses the defects in egg-laying and response to reoxygenation of paqr-2 mutants.
+Q9XWZ2	S|155-156|F	In n5657; suppresses the defects in egg-laying and response to reoxygenation of paqr-2 mutants.
+Q9XWZ2	G|157-158|R	In n5661; suppresses the defects in egg-laying and response to reoxygenation of paqr-2 mutants.
+Q9XWZ2	G|213-214|E	In n5879; suppresses the defects in egg-laying and response to reoxygenation of paqr-2 mutants.
+Q9XWZ2	G|442-443|R	In n5877; suppresses the defects in egg-laying and response to reoxygenation of paqr-2 mutants.
+Q9XWZ2	R|454-455|H	In n5876; suppresses the defects in egg-laying and response to reoxygenation of paqr-2 mutants.
+Q05941	L|432-433|A	Abolishes dependency on RIC3 for functional expression.
+Q05941	K|434-435|A	No effect on dependency on RIC3 for functional expression.
+Q05941	V|439-440|A	Impairs dependency on RIC3 for functional expression.
+Q05941	N|444-445|A	Slightly impairs dependency on RIC3 for functional expression.
+Q05941	R|445-446|A	Impairs dependency on RIC3 for functional expression.
+Q05941	F|446-447|A	Impairs dependency on RIC3 for functional expression.
+Q05941	R|447-448|A	Impairs dependency on RIC3 for functional expression.
+Q07912	K|157-158|R	Loss of autophosphorylation.
+Q07912	L|486-487|F	Constantly active kinase.
+P36877	RR|164-166|EE	Inhibits incorporation into the PP2A holoenzyme complex and proapoptotic activity.
+P01009	M|381-382|V	Oxidation-resistant inhibitor of therapeutic importance.
+P54646	T|171-172|D	Phosphomimetic mutant.
+Q8IUX4	E|66-67|A	Decrease in cytidine deaminase and antiviral activity; when associated with A-251.
+Q8IUX4	E|66-67|A	No effect on cytidine deaminase and antiviral activity.
+Q8IUX4	E|250-251|A	Decrease in cytidine deaminase and antiviral activity.
+Q8IUX4	E|250-251|A	Decrease in cytidine deaminase and antiviral activity; when associated with A-67.
+Q9HC16	E|66-67|A	Loss of cytidine deaminase activity and significant decrease in antiviral activity; when associated with A-259.
+Q9HC16	E|66-67|A	No effect on cytidine deaminase and antiviral activity.
+Q9HC16	E|66-67|Q	Decreases cytidine deaminase activity.
+Q9HC16	H|80-81|A	Decreases cytidine deaminase activity.
+Q9HC16	E|84-85|Q	Does not decrease cytidine deaminase activity.
+Q9HC16	C|96-97|A	Decreases cytidine deaminase activity.
+Q9HC16	C|99-100|S	Decreases cytidine deaminase activity.
+Q9HC16	D|127-128|K	Complete loss of VIF-induced degradation.
+Q9HC16	R|212-213|A	Slightly reduces enzyme activity.
+Q9HC16	R|212-213|E	Reduces enzyme activity.
+Q9HC16	R|214-215|E	Abolishes enzyme activity.
+Q9HC16	E|216-217|K	Modifies the spectrum of action against mobile genetic elements; when associated with K-247.
+Q9HC16	T|217-218|A	Loss of phosphorylation. No effect on cytidine deaminase activity or HIV-1 restriction activity.
+Q9HC16	T|217-218|E	Phosphomimetic mutant which shows loss of cytidine deaminase activity and HIV-1 restriction activity.
+Q9HC16	C|220-221|S	Does not decrease cytidine deaminase activity.
+Q9HC16	N|243-244|A	Abolishes enzyme activity.
+Q9HC16	P|246-247|K	Modifies the spectrum of action against mobile genetic elements; when associated with K-217.
+Q9HC16	R|255-256|E	Strongly reduces enzyme activity.
+Q9HC16	H|256-257|A	Decreases cytidine deaminase activity.
+Q9HC16	E|258-259|A	Loss of cytidine deaminase activity and significant decrease in antiviral activity.
+Q9HC16	E|258-259|A	Loss of cytidine deaminase activity and significant decrease in antiviral activity; when associated with A-67.
+Q9HC16	E|258-259|Q	Decreases cytidine deaminase activity and antiviral activity.
+Q9HC16	W|284-285|A	Abolishes enzyme activity.
+Q9HC16	C|287-288|A	Decreases cytidine deaminase activity.
+Q9HC16	C|290-291|S	Decreases cytidine deaminase activity.
+Q9HC16	R|312-313|E	Abolishes enzyme activity.
+Q9HC16	Y|314-315|A	Abolishes enzyme activity.
+Q9HC16	R|319-320|A	Slightly reduces enzyme activity.
+Q9HC16	R|319-320|E	Reduces enzyme activity.
+Q9HC16	E|322-323|Q	Does not decrease cytidine deaminase activity.
+P78363	G|965-966|D	Abolishes basal and retinal-stimulated ATP hydrolysis.
+P78363	K|968-969|M	Abolishes basal and retinal-stimulated ATP hydrolysis.
+P78363	G|1974-1975|D	Inhibition of retinal-stimulated ATP hydrolysis.
+P78363	K|1977-1978|M	Inhibition of retinal-stimulated ATP hydrolysis.
+P51174	K|41-42|R	Reduces activity by 90% when associated with R-318 and R-322.
+P51174	K|317-318|R	Reduces activity by 37%; reduces activity by 80% when associated with R-322.
+P51174	K|321-322|R	Reduces activity by 23%; reduces activity by 80% when associated with R-318.
+Q15057	R|441-442|Q	Loss of GAP activity.
+P12822	K|726-727|E	No effect on activity. 20-fold reduction in catalytic efficiency; when associated with F-809.
+P12822	Y|808-809|F	No effect on activity. 20-fold reduction in catalytic efficiency; when associated with E-727.
+P09484	K|277-278|E	Increases channel conductance by almost 100%.
+Q9UKV3	D|1092-1093|A	Abolishes cleavage by CASP3 and chromatin condensation activity.
+P21399	C|299-300|S	No effect on aconitase activity or on RNA binding.
+P21399	C|436-437|S	Loss of aconitase activity. Leads to constitutive RNA binding, irrespective of iron levels.
+P21399	C|502-503|S	Loss of aconitase activity. Leads to constitutive RNA binding, irrespective of iron levels.
+P21399	C|505-506|S	Loss of aconitase activity. Leads of iron levels.
+P21399	R|535-536|Q	Strongly reduced RNA binding.
+P21399	R|540-541|Q	Strongly reduced RNA binding.
+P21399	R|698-699|K	No effect on RNA binding.
+P21399	S|777-778|A	No effect on iron-regulated RNA binding. Loss of aconitase activity.
+P21399	R|779-780|Q	Nearly abolishes RNA binding.
+P31941	R|27-28|E	No effect on deaminase activity despite an altered restriction activity towards genetic invaders.
+P31941	H|28-29|A	Altered deaminase activity and restriction activity towards genetic invaders.
+P31941	K|29-30|F	Altered deaminase activity and restriction activity towards genetic invaders.
+P31941	N|56-57|A	Altered deaminase activity and restriction activity towards genetic invaders.
+P31941	K|59-60|A	Altered deaminase activity and restriction activity towards genetic invaders.
+P31941	R|68-69|A	Altered deaminase activity and restriction activity towards genetic invaders.
+P31941	H|69-70|R	Altered deaminase activity.
+P31941	E|71-72|Q	Altered deaminase activity and restriction activity towards genetic invaders.
+P31941	W|97-98|L	Altered deaminase activity and restriction activity towards genetic invaders.
+P31941	C|105-106|S	Altered deaminase activity.
+P31941	R|127-128|A	Altered deaminase activity and restriction activity towards genetic invaders.
+P31941	Y|129-130|A	Altered deaminase activity and restriction activity towards genetic invaders.
+P31941	D|130-131|N	No effect on deaminase activity despite an altered restriction activity towards genetic invaders.
+P31941	D|132-133|N	Altered deaminase activity and restriction activity towards genetic invaders.
+P31941	Y|135-136|A	Altered deaminase activity and restriction activity towards genetic invaders.
+P28288	G|477-478|R	Decreased ATP-binding affinity.
+P28288	S|571-572|I	Decreased ATPase activity.
+Q99J72	E|72-73|A	Decrease in cytidine deaminase and antiviral activity.
+Q99J72	E|72-73|A	Decrease in cytidine deaminase and antiviral activity; when associated with A-290.
+Q99J72	E|289-290|A	Decrease in cytidine deaminase and antiviral activity; when associated with A-73.
+Q99J72	E|289-290|A	No effect on cytidine deaminase and antiviral activity.
+Q24174	R|584-585|C	In allele AB-CLU2; lethal.
+Q9H845	E|425-426|Q	Catalytically inactive. Does not affect mitochondrial complex I assembly.
+P35348	K|333-334|A	Abolishes targeting to the nuclear membrane of cardiac myocytes; when associated with A-335; A-342; A-348 and A-349.
+P35348	K|334-335|A	Abolishes targeting to the nuclear membrane of cardiac myocytes; when associated with A-334; A-342; A-348 and A-349.
+P35348	R|341-342|A	Abolishes targeting to the nuclear membrane of cardiac myocytes; when associated with A-334; A-335; A-348 and A-349.
+P35348	R|347-348|A	Abolishes targeting to the nuclear membrane of cardiac myocytes; when associated with A-334; A-335; A-342 and A-349.
+P35348	K|348-349|A	Abolishes targeting to the nuclear membrane of cardiac myocytes; when associated with A-334; A-335; A-342 and A-348.
+P18871	C|441-442|S	Loss of palmitoylation.
+Q9UKF2	H|337-338|L	Loss of enzymatic activity; when associated with L-342 and L-348.
+Q9UKF2	H|341-342|L	Loss of enzymatic activity; when associated with L-338 and L-348.
+Q9UKF2	H|347-348|L	Loss of enzymatic activity; when associated with L-338 and L-342.
+P97275	H|299-300|A	Loss of activity.
+P97275	T|308-309|I	Impaired FAD binding and protein stability. Loss of activity.
+P97275	S|366-367|A	Strongly reduced activity.
+P97275	R|418-419|H	Loss of activity.
+P97275	R|418-419|K	Strongly reduced activity.
+P97275	L|468-469|P	Impaired FAD binding and protein stability. Loss of activity.
+P97275	R|514-515|L	Impaired FAD binding and protein stability. Loss of activity.
+P97275	Y|577-578|F	Loss of activity.
+P97275	H|614-615|A	Loss of activity.
+P97275	H|615-616|A	Loss of activity.
+P97275	H|616-617|A	Loss of activity.
+P19754	F|502-503|A	Impairs interaction with CALM and responses to Ca(2+)/calmodulin.
+Q9W197	FG|74-76|HN	Increases KM 7-fold for CMP; when associated with TRP-121.
+Q9W197	F|74-75|H	Increases KM 3-fold for m(7)GMP and increases KM 10-fold for CMP. Decreases KM 6-fold for m(7)GMP and increases KM 2-fold for CMP; when associated with TRP-121.
+Q9W197	G|75-76|N	Decreases KM 6-fold for m(7)GMP. Decreases KM 1.5-fold for m(7)GMP and increases KM 1.5-fold for CMP; when associated with TRP-121.
+Q9W197	W|120-121|Y	Considerable increase (12-fold) in KM for m(7)GMP and decreases KM 3-fold for CMP. Decreases KM 6-fold for m(7)GMP and increases KM 2-fold for CMP; when associated with HIS-75. Decreases KM 1.5-fold for m(7)GMP and increases KM 1.5-fold for CMP; when associated with ASN-76. Increases KM 7-fold for CMP; when associated with 75-HIS--ASN-76.
+P04058	E|219-220|H	Loss of activity.
+P04058	E|219-220|D	Decrease in activity.
+P04058	S|220-221|C	Loss of activity.
+P04058	S|220-221|V	Loss of activity.
+P04058	H|445-446|Q	Almost no loss of activity.
+P04058	H|460-461|Q	Loss of activity.
+Q17R13	K|157-158|R	Abolishes enzyme activity.
+O54967	K|157-158|A	Loss of kinase activity.
+O54967	W|423-424|K	Increase in autophosphorylation activity.
+O54967	H|463-464|D	Loss of CDC42-binding and impairment of autophosphorylation.
+O54967	Y|649-650|A	Loss of interaction with NEDD4 and drastic reduction in its ubiquitination.
+Q9Y615	A|30-31|Y	Abolishes interaction with TES.
+Q9Y615	A|40-41|Y	Abolishes interaction with TES.
+Q60876	F|112-113|A	Impaired interaction with RPTOR.
+Q7YQK3	C|109-110|S	No effect on phenylalanine transport.
+Q7YQK3	C|331-332|S	No effect on phenylalanine transport.
+P28335	P|158-159|A	Decreases interaction with ARRB2.
+P28335	S|455-456|A	Loss of interaction with MPDZ.
+P28335	S|455-456|T	No effect on interaction with MPDZ.
+P28335	S|456-457|A	No effect on interaction with MPDZ.
+P28335	V|457-458|A	Loss of interaction with MPDZ.
+Q9H0P0	D|87-88|N	Loss of nucleotidase and phosphotransferase activity.
+Q9H0P0	F|88-89|A	Almost complete loss of nucleotidase and phosphotransferase activity.
+Q9H0P0	D|89-90|N	Loss of nucleotidase and phosphotransferase activity.
+Q9H0P0	E|134-135|D	No effect on nucleotidase activity. Almost complete loss of phosphotransferase activity.
+Q9H0P0	D|231-232|N	No effect on nucleotidase and phosphotransferase activity.
+Q9H0P0	F|232-233|A	Almost complete loss of nucleotidase and phosphotransferase activity.
+Q9H0P0	D|233-234|N	No effect on nucleotidase and phosphotransferase activity.
+P12961	R|176-177|A	No effect on proteolytic processing. Abolishes proteolytic processing; when associated with G-178.
+P12961	R|177-178|G	Abolishes proteolytic processing; when associated with A-177.
+Q4ZFU2	H|73-74|N	Does not release choline from LPC.
+P07140	N|125-126|D	Decrease in apparent molecular weight of 16 kDa subunit.
+P07140	N|173-174|S	Decrease in apparent molecular weight of 55 kDa subunit. Decrease in apparent molecular weight of 55 kDa subunit equivalent to the sum of decreases observed with S-174; D-133 and D-331; when associated with D-331 and D-531.
+P07140	C|327-328|V	No effect on apparent molecular weight.
+P07140	N|330-331|D	Decrease in apparent molecular weight of the 55 kDa subunit. Decrease in apparent molecular weight of 55 kDa subunit equivalent to the sum of individual decreases observed with S-174; D-331 and D-531; when associated with S-174 and D-531.
+P07140	N|530-531|D	Decrease in apparent molecular weight of the 55 kDa subunit. Decrease in apparent molecular weight of 55 kDa subunit equivalent to the sum of individual decreases observed with S-174; D-331 and D-531; when associated with S-174 and D-331.
+P07140	N|568-569|D	No change in apparent molecular weight of the 55 kDa subunit.
+P07140	C|614-615|R	Formation of 75 kDa monomer.
+P12821	S|1298-1299|A	Abolishes phosphorylation and decreases membrane retention.
+G5EG88	D|111-112|N	In cb101; highly resistant to monepantel.
+G5EG88	I|300-301|N	Increases sensitivity to betaine. Leads to death during larval development in most cases, with escapees reaching to adulthood but being hypercontracted and uncoordinated.
+G5EG88	P|310-311|L	In ox429; mild swimming defects and lethargic movement when crawling on a food-free environment.
+G5EG88	A|320-321|T	In cb103; highly resistant to monepantel.
+P09482	E|288-289|K	Reduces channel conductance by 50%.
+P22770	L|269-270|T	Suppresses inhibition by the open-channel blocker QX-222.
+O88839	R|481-482|A	Reduced binding to CHO cells expressing ITAG9-ITGB1.
+O88839	D|488-489|A	Reduced binding to CHO cells expressing ITAG9-ITGB1.
+O88839	L|489-490|A	Reduced binding to CHO cells expressing ITAG9-ITGB1.
+O88839	P|490-491|A	Reduced binding to CHO cells expressing ITAG9-ITGB1.
+O88839	E|491-492|A	Reduced binding to CHO cells expressing ITAG9-ITGB1.
+O88839	F|492-493|A	Reduced binding to CHO cells expressing ITAG9-ITGB1.
+P35368	RGRGRRRRRRRRR|367-380|AGAGAAAAAAAAA	Abolishes targeting to the nuclear membrane of cardiac myocytes.
+Q9R1V6	D|508-509|N	Fails to bind to LGI1.
+Q9JLN6	E|342-343|A	Abolishes prodomain removal.
+P26769	S|489-490|A	Reduces activation by PKC. Abolishes activation by PKC; when associated with A-543.
+P26769	S|489-490|D	Increases basal level of enzyme activity. Abolishes activation by PKC; when associated with D-543.
+P26769	S|542-543|A	Reduces activation by PKC. Abolishes activation by PKC; when associated with A-490.
+P26769	S|542-543|D	Increases basal level of enzyme activity. Abolishes activation by PKC; when associated with D-490.
+Q8VHH7	M|278-279|I	In Jll; dominant allele that increases enzyme activity, and decreases fasting insulin levels, fasting leptin levels, weight gain and fat accumulation when mice are kept on a high fat diet.
+P30803	D|476-477|N	Almost abolishes enzyme activity. Abolishes enzyme activity; when associated with A-521 or N-521.
+P30803	D|520-521|N	Almost abolishes enzyme activity. Abolishes enzyme activity; when associated with A-396 or N-396.
+Q8R2Z0	N|38-39|A	Decreased N-glycosylation.
+Q8R2Z0	C|84-85|A	Abolishes multimeric complex formation.
+Q8R2Z0	KKSR|89-93|AASA	Nearly abolishes protein processing.
+Q8R2Z0	None|89-93|None	Abolishes protein processing.
+Q8R2Z0	R|92-93|A	Enhances protein processing.
+Q60994	C|38-39|A	No change in the interaction with CTRP9.
+Q60994	K|67-68|R	Impaired formation of HMW multimers; when associated with R-71; R-80 and R-104.
+Q60994	K|70-71|R	Impaired formation of HMW multimers; when associated with R-68; R-80 and R-104.
+Q60994	K|79-80|R	Impaired formation of HMW multimers; when associated with R-68; R-71 and R-104.
+Q60994	K|103-104|R	Impaired formation of HMW multimers; when associated with R-68; R-71 and R-80.
+P55263	KK|10-12|AD	Abolishes nuclear localization.
+P04274	D|78-79|A	Small decrease in agonist binding. No effect on antagonist binding.
+P04274	D|112-113|A	Drastic decrease in agonist and antagonist binding. Stimulates adenylyl cyclase activity.
+P04274	S|203-204|A	Decrease in catechol agonist binding.
+P04274	S|206-207|A	Decrease in catechol agonist binding.
+P02592	G|35-36|R	100% activity loss.
+P02592	H|64-65|F	100% activity loss.
+P02592	G|128-129|R	51% activity loss.
+P02592	C|151-152|R	52% activity loss.
+P02592	C|151-152|S	33% activity loss.
+P02592	C|158-159|S	41% activity loss.
+P02592	G|164-165|R	No activity loss.
+P02592	C|186-187|S	71% activity loss.
+P02592	None|195-196|None	Loss of bioluminescence.
+Q13015	LSELEGLGL|23-32|ASEAEGAGA	Constitutive nuclear sequestration.
+C0HJR2	H|32-33|S	Loss of activity.
+P0C1Z0	TT|7-9|AA	18-fold increase in inhibition potency.
+P0C1Z0	T|7-8|V	2.5-fold increase in affinity for TcAChE. 2.1-fold decrease in affinity for TcAChE; when associated with N-9. 1.9-fold increase in affinity for TcAChE; when associated with N-9, K-11 and R-29 [FasDesK32]. 3.9-fold decrease in affinity for TcAChE; when associated with N-9, K-11, R-29 and R-32 [FasDes].
+P0C1Z0	T|8-9|N	9.0-fold decrease in affinity for TcAChE. 2.1-fold decrease in affinity for TcAChE; when associated with V-8. 1.9-fold increase in affinity for TcAChE; when associated with V-8, K-11 and R-29 [FasDesK32]. 3.9-fold decrease in affinity for TcAChE; when associated with V-8, K-11, R-29 and R-32 [FasDes].
+P0C1Z0	R|10-11|K	1.7-fold decrease in affinity for TcAChE. 1.9-fold increase in affinity for TcAChE; when associated with V-8, N-9 and R-29 [FasDesK32]. 3.9-fold decrease in affinity for TcAChE; when associated with V-8, N-9, R-29 and R-32 [FasDes].
+P0C1Z0	R|10-11|Q	6-fold increase in inhibition potency.
+P0C1Z0	R|23-24|T	13-fold decrease in inhibition potency.
+P0C1Z0	K|24-25|L	No significant difference in inhibition potency.
+P0C1Z0	R|26-27|W	49-fold decrease in inhibition potency.
+P0C1Z0	R|27-28|D	No significant difference in inhibition potency.
+P0C1Z0	H|28-29|D	73-fold increase in inhibition potency.
+P0C1Z0	H|28-29|R	6.0-fold increase in affinity for TcAChE. 1.9-fold increase in affinity for TcAChE; when associated with V-8, N-9 and K-11 [FasDesK32]. 3.9-fold decrease in affinity for TcAChE; when associated with V-8, N-9, K-11 and R-32 [FasDes].
+P0C1Z0	None|29-30|None	192-fold decrease in inhibition potency.
+P0C1Z0	P|30-31|R	625-fold decrease in inhibition potency.
+P0C1Z0	K|31-32|G	3-fold decrease in inhibition potency.
+P0C1Z0	K|31-32|R	7.4-fold decrease in affinity for TcAChE. 3.9-fold decrease in affinity for TcAChE; when associated with V-8, N-9, K-11 and R-29 [FasDes].
+P0C1Z0	M|32-33|A	8-fold decrease in inhibition potency.
+P0C1Z0	VL|33-35|AA	No significant difference in inhibition potency.
+P0C1Z0	D|44-45|K	No significant difference in inhibition potency.
+P0C1Z0	K|50-51|S	No significant difference in inhibition potency.
+Q8QGR0	R|54-55|A	105-fold decrease in affinity to M1 muscarinic acetylcholine receptors and change from irreversible to reversible binding.
+Q8QGR0	F|58-59|I	Decrease in affinity to M1 muscarinic acetylcholine receptors and change from irreversible to reversible binding.
+Q8QGR0	K|85-86|E	Decrease in affinity to M1 muscarinic acetylcholine receptors.
+P28375	PRGDMP|41-47|ARGDMA	7-fold loss of ability to inhibit ADP-induced platelet aggregation.
+P28375	P|41-42|A	No change in ability to inhibit ADP-induced platelet aggregation.
+P28375	R|42-43|A	This mutation alters integrin binding selectivity. It provokes 95-fold loss of ability to inhibit ADP-induced platelet aggregation, 71-fold loss of ability to inhibit A375 cell adhesion to fibrinogen, and almost complete loss of ability to inhibit HEL cell adhesion to fibrinogen.
+P28375	R|42-43|H	This mutation alters integrin binding selectivity. It provokes 14-fold loss of ability to inhibit ADP-induced platelet aggregation, 3-fold loss of ability to inhibit A375 cell adhesion to fibrinogen, 8-fold loss of ability to inhibit HEL cell adhesion to fibrinogen.
+P28375	R|42-43|K	This mutation alters integrin binding selectivity. It provokes 1.4-fold loss of ability to inhibit ADP-induced platelet aggregation, 6-fold loss of ability to inhibit A375 cell adhesion to fibrinogen and 8-fold loss of ability to inhibit HEL cell adhesion to fibrinogen.
+P28375	R|42-43|Q	This mutation alters integrin binding selectivity. It provokes 33-fold loss of ability to inhibit ADP-induced platelet aggregation, 5-fold loss of ability to inhibit A375 cell adhesion to fibrinogen, and almost complete loss of ability to inhibit HEL cell adhesion to fibrinogen.
+P28375	G|43-44|C	This mutation promotes selective inhibition of beta-3 integrin; it provokes 1.8-fold loss of ability to inhibit ADP-induced platelet aggregation, 6-fold loss of ability to inhibit A375 cell adhesion to fibrinogen and 330-fold loss of ability to inhibit K562 cell adhesion to fibrinogen.
+P28375	G|43-44|Y	This mutation promotes selective inhibition of beta-1 integrin; provokes 1.2-fold loss of ability to inhibit ADP-induced platelet aggregation, 11-fold loss of ability to inhibit A375 cell adhesion to fibrinogen and 75-fold loss of ability to inhibit K562 cell adhesion to fibrinogen.
+P28375	PGP|46-49|AGA	8.5-fold loss of ability to inhibit ADP-induced platelet aggregation.
+P28375	P|46-47|A	No change in ability to inhibit ADP-induced platelet aggregation.
+P28375	P|48-49|A	No change in ability to inhibit ADP-induced platelet aggregation.
+Q62622	S|63-64|A	Decreases phosphorylation by MAPK1 and MAPK3.
+P28647	CRLC|301-305|ARLA	Promotes agonist-independent phosphorylation.
+P28647	T|306-307|A	Small decrease in agonist-stimulated phosphorylation.
+P28647	T|317-318|E	Strong decrease in agonist-stimulated phosphorylation.
+P28647	T|318-319|A	50% decrease in agonist-stimulated phosphorylation.
+Q7M370	K|2-3|I	No effect on membrane topology. Inverted topology; when associated with N-24; Q-27 and Q-28, or with N-24; K-27 and K-28.
+Q7M370	D|23-24|K	Inverted topology; when associated with I-3; Q-27 and Q-28, or with I-3; K-27 and K-28.
+Q7M370	EE|26-28|QQ	No effect on topology; when associated with K-24. Inverted topology; when associated with I-3 and K-24.
+Q2M2I8	K|73-74|A	Inhibits autophosphorylation and phosphorylation of AP2M1. Does not affect NUMB localization. Does not interact with monoubiquitinated NOTCH1.
+Q2M2I8	D|175-176|A	Inhibits autophosphorylation and phosphorylation of AP2M1. Does not affect NUMB localization.
+Q2M2I8	DPF|776-779|AAA	Does not affect interaction with NOTCH1 but abolishes interaction with ESP15.
+Q9Y478	G|1-2|A	Abolishes myristoylation and AMP-enhanced phosphorylation of PRKAA1 or PRKAA2.
+P45844	C|29-30|A	No significant effect.
+P45844	C|153-154|A	No significant effect.
+P45844	C|314-315|S	Significantly decreases ABCG1-mediated cholesterol efflux.
+P45844	C|393-394|A	No significant effect.
+P45844	C|405-406|A	No significant effect.
+Q9BV23	S|147-148|A	Loss of 2-arachidonoyglycerol hydrolase activity.
+P00520	P|111-112|S	Strongly reduced inhibition by GNF-2.
+P00520	Y|127-128|D	Strongly reduced inhibition by GNF-2.
+P00520	Y|138-139|C	Strongly reduced inhibition by GNF-2.
+P00520	Y|225-226|F	Minimal reduction in ability to autophosphorylate.
+P00520	S|228-229|P	Strongly reduced inhibition by GNF-2.
+P00520	K|270-271|M	Loss of kinase activity.
+P00520	T|314-315|I	Loss of inhibition by imatinib. Loss of inhibition by GNF-2.
+P00520	Y|392-393|F	Minimal reduction in ability to autophosphorylate.
+P00520	S|445-446|A	No effect on basal activity, but abolishes ionizing radiation-induced activation.
+P00520	C|463-464|Y	Loss of inhibition by GNF-2.
+P00520	P|464-465|S	Loss of inhibition by GNF-2.
+P00520	F|496-497|L	Strongly reduced inhibition by GNF-2.
+P00520	E|504-505|K	Loss of inhibition by GNF-2.
+P00520	V|505-506|L	Strongly reduced inhibition by GNF-2.
+P00520	L|1082-1083|A	Loss of nuclear export.
+P63104	K|48-49|E	Loss of interaction with NOXA1.
+P63104	S|57-58|A	Loss of sphingosine-activated PKA phosphorylation. Promotes homodimerization and heterodimerization with YWHAE. Enhanced transcriptional activity of P53.
+P63104	S|57-58|E	Loss of homodimerization. Reduced dimerization with YWHAE. Significantly reduced interaction with P53. No enhancement of P53 transcriptional activity.
+P63104	S|183-184|A	On DNA damage, loss of MAPK8-mediated phosphorylation. Loss of binding ABL1. Attenuates ABL1-mediated apoptosis. No loss of interaction with BAX under stress conditions. Inhibits translocation of BAX to mitochondria.
+P60770	E|58-59|Q	Decrease in the rate of isomerization reaction of disulfide bonds.
+P60770	K|67-68|E	Decrease in the rate of isomerization reaction of disulfide bonds.
+P60770	K|67-68|Q	Decrease in the rate of isomerization reaction of disulfide bonds.
+P81030	R|33-34|A	Binds with 170-fold reduced affinity to M1 muscarinic acetylcholine receptors.
+Q13542	T|36-37|E	Acidic residues do not mimic phosphorylation state. Does not induce folding of the intrinsically disordered protein; when associated with D-46 or E-46.
+Q13542	G|38-39|V	Abolishes folding of the intrinsically disordered protein without affecting greatly affinity for EIF4E even when the protein is fully phosphorylated; when associated with V-48.
+Q13542	T|45-46|E	Acidic residues do not mimic phosphorylation state. Does not induce folding of the intrinsically disordered protein; when associated with D-37 or E-37.
+Q13542	G|47-48|V	Abolishes folding of the intrinsically disordered protein without affecting greatly affinity for EIF4E even when the protein is fully phosphorylated; when associated with V-39.
+Q13542	YDRKFLL|53-60|AAAAAAA	Impaired binding to EIF4E.
+Q13542	IPGVT|77-82|AAAAA	Impaired binding to EIF4E.
+Q9NRA8	Y|29-30|A	Abolishes interaction with EIF4E.
+Q9NRA8	RR|194-196|NS	Abolishes the nuclear localization.
+P08195	C|209-210|S	Abolishes dimerization, leucine uptake and interaction with beta-1 integrins.
+P08195	C|430-431|S	No effect on dimerization, leucine uptake or interaction with beta-1 integrins.
+Q9NQ94	F|58-59|A	Greatly reduced RNA binding.
+Q9NQ94	F|99-100|A	Greatly reduced RNA binding.
+Q9NQ94	F|138-139|A	Greatly reduced RNA binding.
+Q9NQ94	F|182-183|A	Greatly reduced RNA binding.
+Q9NQ94	Y|233-234|A	Slightly reduced RNA binding.
+Q9NQ94	F|269-270|A	Slightly reduced RNA binding.
+P0CE79	H|36-37|N	Abolishes enzyme activity.
+P0CE79	H|72-73|N	Abolishes enzyme activity.
+P0CE79	H|107-108|N	Little decrease in enzyme activity.
+P0CE79	H|163-164|N	Little decrease in enzyme activity.
+P0CE79	H|179-180|N	Little decrease in enzyme activity.
+P0CE79	T|257-258|V	Little decrease in enzyme activity.
+P0CE80	H|37-38|A	Loss of nephrotoxic effect and hemolytic activity on erythrocytes.
+A0A4Z3	L|186-187|P	Significant loss of activity.
+A0A4Z3	DVD|197-200|AVA	Catalytically inactive.
+A0A4Z3	Y|251-252|N	Complete loss of activity.
+P12023	Y|727-728|A	No effect on MAPK8IP1 binding.
+P12023	HH|731-733|GP	Almost complete loss of binding to G(o) alpha subunit. No inhibition of GTPase activity.
+P12023	T|742-743|E	No effect on MAPK8IP1 binding.
+P12023	G|755-756|W	Greatly impairs interaction with DAB2.
+P12023	G|755-756|Y	Impairs interaction with DAB2.
+P12023	Y|756-757|F	Greatly promotes interaction with DAB2.
+P12023	Y|756-757|V	Greatly impairs interaction with DAB2.
+P12023	Y|756-757|G	No MAPK8IP1 nor APBA1 nor APBB1 nor DAB1 binding.
+P12023	Y|756-757|W	Impairs interaction with DAB2.
+P12023	N|758-759|A	No MAPK8IP1 nor APBA1 nor Dab1 binding. No effect on APBB1 binding.
+P12023	N|758-759|P	Greatly impairs interaction with DAB2.
+P12023	P|759-760|Y	Greatly impairs interaction with DAB2.
+P12023	Y|761-762|A	No MAPK8IP1 nor APBA1 nor Dab1 binding. No effect on APBB1 binding.
+P12023	Y|761-762|W	Greatly impairs interaction with DAB2.
+Q5EG47	D|167-168|A	Loss of kinase activity.
+P54645	T|182-183|E	Hinders activation.
+P54645	T|268-269|A	Hinders activation.
+P54645	T|268-269|D	Retains activation ability.
+P54645	RHTLDE|385-391|AHALAA	Allosterically activated by AMP but is not protected against dephosphorylation by AMP or ADP.
+P54645	S|495-496|A	Hinders activation.
+P54645	S|495-496|D	Retains activation ability.
+Q8N2K0	S|245-246|A	Loss of 2-arachidonoyglycerol hydrolase activity.
+Q8N2K0	D|332-333|N	Loss of 2-arachidonoyglycerol hydrolase activity.
+Q8N2K0	H|371-372|A	Loss of 2-arachidonoyglycerol hydrolase activity.
+Q6QA69	E|8-9|K	Colocalized to the lipid droplets with PLIN and ADPR.
+Q6QA69	Q|131-132|P	Exhibits a diffuse cytoplasmic disribution without colocalization to lipid droplets with PLIN and ADPR. Loss of binding to PLIN.
+Q6QA69	E|261-262|K	Exhibits a diffuse cytoplasmic disribution without colocalization to lipid droplets with PLIN and ADPR. Loss of binding to PLIN.
+Q8K2H4	R|447-448|Q	Loss of catalytic activity. No loss of accumulation of coat proteins on internal membranes upon overexpression of Acap1.
+Q99PU5	G|280-281|A	Abolishes enzyme activity; when associated with M-287.
+Q99PU5	K|286-287|M	Abolishes enzyme activity; when associated with A-281.
+Q5FVE4	H|510-511|R	Results in a shift of the pH optimum to a more acidic pH without affecting substrate specificity.
+P92177	E|182-183|K	Suppressor of sev-Ras1 V12; subviable.
+P92177	F|198-199|Y	Suppressor of sev-Ras1 V12.
+P92177	Y|213-214|F	Suppressor of sev-Ras1 V12.
+G5EDR3	E|229-230|K	In cs24; viable with no visible phenotype. Suppresses multivulva formation in a let-60 n1046 mutant background.
+G5EDR3	C|301-302|Y	In ku123; viable with no visible phenotype. Suppresses multivulva formation in a let-60 n1046 mutant background.
+O60239	L|346-347|A	Loss of phosphorylation and binding by phospho-JNK; when associated with A-349.
+O60239	L|348-349|A	Loss of phosphorylation and binding by phospho-JNK; when associated with A-347.
+O60239	L|433-434|A	No change of phosphorylation or binding by phospho-JNK; when associated with A-436.
+O60239	L|435-436|A	No change of phosphorylation or binding by phospho-JNK; when associated with A-434.
+P01398	Q|46-47|W	Little increase in inhibition of neuronal receptor and 8-fold increase in inhibition of muscle receptor.
+P01398	R|54-55|A	Loss of inhibition of neuronal and muscle receptors.
+P01398	P|56-57|A	No important change in inhibition of muscle and neuronal receptors.
+P01398	P|56-57|K	13-fold decrease in inhibition of neuronal receptor, no change in inhibition of muscle receptor.
+O60516	Y|39-40|A	Loss of interaction with EIF4E.
+O60516	L|44-45|A	Loss of interaction with EIF4E.
+P28222	L|125-126|A	No effect on agonist binding.
+P28222	D|128-129|A	Abolishes agonist binding.
+P28222	I|129-130|A	Abolishes agonist binding.
+P28222	C|132-133|A	Abolishes agonist binding.
+P28222	T|133-134|A	Slightly decreases agonist binding.
+P28222	V|199-200|A	No effect on agonist binding.
+P28222	V|200-201|A	No effect on agonist binding.
+P28222	T|202-203|A	No effect on agonist binding.
+P28222	T|208-209|A	No effect on agonist binding.
+P28222	S|211-212|A	No effect on agonist binding.
+P28222	A|215-216|S	No effect on agonist binding.
+P28222	W|326-327|A	Abolishes agonist binding.
+P28222	F|329-330|A	Abolishes agonist binding.
+P28222	F|330-331|A	No effect on agonist binding.
+P28222	S|333-334|A	No effect on agonist binding.
+P28222	M|336-337|A	No effect on agonist binding.
+P28222	F|350-351|A	No effect on agonist binding.
+P28222	D|351-352|A	No effect on agonist binding.
+P28222	T|354-355|A	No effect on agonist binding.
+P28222	Y|358-359|A	No effect on agonist binding.
+P28223	S|279-280|A	Increased ability of hallucinogens to desensitize the receptor.
+P28223	S|279-280|D	Reduced receptor desensitization by nonhallucinogenic agonists.
+P28223	G|462-463|V	Loss of interaction with PATJ.
+P28223	N|464-465|S	No effect on interaction with PATJ. Acquires the binding properties of HTR2C; when associated with S-470.
+P28223	C|469-470|S	No effect on interaction with PATJ. Acquires the binding properties of HTR2C; when associated with S-465.
+P28223	V|470-471|A	Loss of interaction with PATJ, CASK, APBA1, DLG1 and DLG4.
+P41595	L|131-132|A	No effect on agonist binding.
+P41595	D|134-135|A	Abolishes agonist binding.
+P41595	V|135-136|A	Slightly decreases agonist binding.
+P41595	S|138-139|A	Slightly decreases agonist binding.
+P41595	T|139-140|A	Slightly decreases agonist binding.
+P41595	V|207-208|A	No effect on agonist binding.
+P41595	L|208-209|A	No effect on agonist binding.
+P41595	K|210-211|A	Impairs protein folding and stability. Strongly reduced cell surface expression.
+P41595	F|216-217|A	Slightly decreases agonist binding.
+P41595	M|217-218|A	No effect on agonist binding.
+P41595	A|224-225|S	No effect on agonist binding.
+P41595	W|336-337|A	Slightly decreases agonist binding.
+P41595	F|339-340|A	Slightly decreases agonist binding.
+P41595	N|343-344|A	Slightly decreases agonist binding.
+P41595	L|346-347|A	No effect on agonist binding.
+P41595	V|347-348|A	No effect on agonist binding.
+P41595	L|361-362|A	No effect on agonist binding.
+P41595	E|362-363|A	No effect on agonist binding.
+P41595	V|365-366|A	No effect on agonist binding.
+P41595	Y|369-370|A	Slightly decreases agonist binding.
+P13368	K|2241-2242|M	Inactivates the protein.
+P22760	N|77-78|Q	Abolishes glycosylation at this site and causes moderate decrease in activity.
+P22760	N|281-282|Q	Abolishes glycosylation at this site and causes substantial decrease in activity and reduced substrate affinity.
+O43741	H|234-235|A	Results in an AMPK enzyme that is activable by phosphorylation but has significantly increased rate of dephosphorylation in phosphatase assays.
+Q9UGJ0	V|386-387|S	Induces phosphorylation by AMPK.

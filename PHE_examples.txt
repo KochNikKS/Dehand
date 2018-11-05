@@ -1,0 +1,12 @@
+Q95PZ9→T|193-194|I→Spermatocytes arresting at the diakinesis stage
+Q95PZ9→S|200-201|F→In hc173; rescue initiation of spermiogenesis in spe-27 mutants
+G5EF60→D|54-55|A→Fluid accumulation in the pseudocoel	
+
+Q9V9J3→G|1-2|D→In Src42A-myri; 63% of mutants die during embryogenesis→PHE|-|death during embryogenesis|¶
+Q9V9J3→G|1-2|D→In embryos, leading edge cell morphology is irregular→PHE|?|leading edge cell morphology is irregular|¶
+Q9V9J3→G|1-2|D→In embryos, the actomyosin cable is disrupted→PHE|?|actomyosin cable is disrupted|¶
+Q9V9J3→G|1-2|D→In embryos, dorsal closure is delayed→PHE|-|dorsal closure is delayed|¶
+Q9V9J3→G|1-2|D→Stage 16 embryos, which have undergone dorsal closure, have an irregular arrangement of epidermal cells→PHE|?|irregular arrangement of epidermal cells|¶
+
+Q9W3J5→A|455-456|G→Impaired locomotive performance→PHE|-|Impaired locomotive performance|¶
+Q9W3J5→A|455-456|G→Reduced lifespan→PHE|-|Reduced lifespan|¶

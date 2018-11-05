@@ -1,0 +1,3 @@
+(INT|ENZ|IND|CHA)[A-Z;]*?\|[+-?0]*?($|\|\|)	
+([\|;])ubiquitin([ -])	\1E3 ubiquitin\2
+(INT;ENZ\|+)	\1;?

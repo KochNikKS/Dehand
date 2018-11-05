@@ -1,0 +1,20 @@
+(INT|ENZ|IND|CHA)[A-Z;]*?\|[+-?0]*?($|\|\|)	
+([\|;])ubiquitin([ -])	\1E3 ubiquitin\2
+(INT;ENZ\|[+])	\1;?
+no loss.+\|--\|	
+some loss.+\|--\|	
+incomplete loss.+\|--\|	
+significant loss.+\|--\|	
+great.*loss.+\|--\|	
+some.*loss.+\|--\|	
+small.*loss.+\|--\|	
+weak.*loss.+\|--\|	
+strong.*loss.+\|--\|	
+not.*loss.+\|--\|	
+little.*loss.+\|--\|	
+almost.*loss.+\|--\|	
+important.*loss.+\|--\|	
+partial.*loss.+\|--\|	
+%.*loss.+\|--\|	
+slight.*loss.+\|--\|	
+severe.*loss.+\|--\|	

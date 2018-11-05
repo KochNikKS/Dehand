@@ -1,0 +1,1203 @@
+#!/usr/bin/python3
+import sys
+import os
+import re
+import platform
+import locale
+import tkinter
+from tkinter import ttk
+from tkinter import filedialog
+from tkinter import simpledialog
+from tkinter import messagebox
+from urllib import request
+import threading
+import time
+# import cProfile
+# import pstats
+# from difflib import SequenceMatcher
+import json
+
+DP = locale.localeconv()['decimal_point']
+if DP == '.':
+    nonDP = ','
+elif DP == ',':
+    nonDP = '.'
+else:
+    nonDP = ',.'
+
+STOP_SEQUENCE = ' \t→;' + nonDP
+BIG_STOP_SEQUENCE = ' .,!?\t→;:-=\\/()|<>{}[]|'
+MED_STOP_SEQUENCE = ' ,!?\t;:|→'
+ALPHABET = 'abcdefghijklmnopqrstuvwxyz'
+ARW = '→'
+PRF = '¶'
+
+
+def is_float(value: str):
+    try:
+        _ = float(value)
+        return True
+    except ValueError:
+        return False
+
+
+class StringEditor:
+    def __init__(self):
+        self.main_window = tkinter.Tk()
+        taskbar_height = 380 if platform.system() == 'Windows' else 0
+        geometry = '{}x300+0+{}'.format(self.main_window.winfo_screenwidth()-10, 
+                                        self.main_window.winfo_screenheight() - taskbar_height)
+
+        self.main_window.geometry(geometry)
+
+        self.main_window.wm_title('"mutation-effect" descriptions handler        ')
+        self.main_window.minsize(640, 200)
+        # ---------------
+        self.help_window = tkinter.Toplevel(self.main_window)
+        self.help_window.wm_title('?')
+        self.help_window_frame1 = tkinter.Frame(self.help_window, height=20)
+        self.help_window_frame2 = tkinter.Frame(self.help_window, height=20)
+        self.help_window_frame1.pack(side='top', fill='x')
+        self.help_window_frame2.pack(side='top', fill='both', expand=True)
+        self.search_button = tkinter.ttk.Button(self.help_window_frame1, text='Search and highlight',
+                                                command=self.text_search)
+        self.search_button.pack(side='left', anchor='nw')
+        self.search_field = tkinter.Entry(self.help_window_frame1, width=40)
+        self.search_field.pack(side='left', anchor='nw', fill='both', expand=True)
+        self.search_field.bind('<Return>', self.text_search)
+        self.help_txt_box = tkinter.Text(self.help_window_frame2, relief='flat', wrap=tkinter.WORD,
+                                         font=("Courier", 12))
+        self.help_txt_box.pack(side='left', fill='both', expand=True)
+        self.scroller = tkinter.ttk.Scrollbar(self.help_window_frame2, command=self.help_txt_box.yview)
+        self.scroller.pack(side='left', fill='y')
+        self.help_txt_box.configure(yscrollcommand=self.scroller.set)
+        self.help_window.protocol("WM_DELETE_WINDOW", self.help_window.withdraw)
+        self.help_txt_box.bind('<Button-1>', self.clear_tags)
+        self.help_window.bind('<Control-KeyPress-f>', self.focus_set_wrp)
+        self.help_window.bind('<Control-KeyPress-F>', self.focus_set_wrp)
+        self.help_window.withdraw()
+        # ---------------
+        self.ins_window = tkinter.Toplevel(self.main_window)
+        self.ins_window.title('Insertions')
+        self.num_frame = tkinter.Frame(self.ins_window)
+        self.ins_frame = tkinter.Frame(self.ins_window)
+        self.num_frame.place(x=1, y=1, width=20, height=200)
+        self.ins_frame.place(x=20, y=1, width=300, height=230)
+        self.insert_fields = []
+        for i in range(10):
+            entry = tkinter.Entry(self.ins_frame, width=40)
+            num_e = tkinter.Entry(self.num_frame, width=2, bg='white')
+            num_e.insert(0, str(i))
+            num_e.configure(state='disabled')
+            num_e.pack(side='top', anchor='nw')
+            entry.pack(side='top', anchor='nw', fill='x')
+            self.insert_fields.append(entry)
+        self.use_but = tkinter.ttk.Button(self.ins_frame, text='Store changes', command=self.use_inserts)
+        self.use_but.pack(side='top', anchor='ne')
+        self.ins_window.resizable(height=False, width=False)
+        self.ins_window.geometry('325x230')
+        self.ins_window.protocol("WM_DELETE_WINDOW", self.ins_window.withdraw)
+        self.ins_window.withdraw()
+        # ----------------
+
+        self.replace_window = tkinter.Toplevel(self.main_window)
+        self.replace_window.wm_title('Search and replace')
+        self.replace_window.resizable(True, 0)
+        self.search_entry = tkinter.Entry(self.replace_window, width=80, font=("Courier", 10))
+        self.replace_entry = tkinter.Entry(self.replace_window, width=80, font=("Courier", 10))
+        self.replace_button = tkinter.ttk.Button(self.replace_window, text='replace', command=self.replace_words)
+        self.search_entry.pack(side='top', fill='x', expand=True)
+        self.replace_entry.pack(side='top', fill='x', expand=True)
+        self.replace_button.pack(side='right')
+        self.replace_window.protocol("WM_DELETE_WINDOW", self.close_replace_dialog)
+        self.search_entry.bind('<Control-KeyPress-H>', self.replace_words)
+        self.search_entry.bind('<Control-KeyPress-h>', self.replace_words)
+        self.replace_entry.bind('<Control-KeyPress-H>', self.replace_words)
+        self.replace_entry.bind('<Control-KeyPress-h>', self.replace_words)
+        self.replace_window.withdraw()
+
+        self.frame1 = tkinter.Frame(self.main_window, height=20)
+        self.frame1.pack(side=tkinter.TOP, fill='x')
+        self.frame2 = tkinter.Frame(self.main_window)
+        self.frame2.pack(side=tkinter.TOP, fill='both', expand=True)
+
+        self.next_button = ttk.Button(self.frame1, text=' Next ', command=self.next_string, width=6)
+        self.split_button = ttk.Button(self.frame1, text=' Split ', command=self.split_line, width=6)
+        self.mark_button = ttk.Button(self.frame1, text='Mark part', command=self.mem_excision1, width=11)
+        self.undo_button = ttk.Button(self.frame1, text=' Undo ', command=self.undo, width=6)
+
+        self.effect_increase_button = ttk.Button(self.frame1, text=' ↑ ', command=self.ins_plus, width=5)
+        self.effect_null_button = ttk.Button(self.frame1, text=' 0 ', command=self.ins_null, width=5)
+        self.effect_decrease_button = ttk.Button(self.frame1, text=' ↓ ', command=self.ins_minus, width=5)
+        self.effect_undefined_button = ttk.Button(self.frame1, text=' ↕ ', command=self.ins1quest, width=5)
+        self.activity_undefined_button = ttk.Button(self.frame1, text=' ? ', command=self.ins2quest, width=5)
+        self.show_replace_dialog = ttk.Button(self.frame1, text='Replace', command=self.show_replace_window, width=7)
+        self.ins_list_button = tkinter.ttk.Button(self.frame1, text='Insertions', command=self.show_insert_list)
+
+        self.uniprot_button = ttk.Button(self.frame1, text='? UniProt', command=self.show_uniprot_entry)
+        self.plus_font_button = ttk.Button(self.frame1, text='+', command=self.plus_font, width='3')
+        self.minus_font_button = ttk.Button(self.frame1, text='-', command=self.minus_font, width='3')
+        self.t_editor = tkinter.Text(self.frame2, height=3, font=("Courier", 12))
+
+        self.undo_button.pack(side=tkinter.LEFT, anchor='nw')
+        self.split_button.pack(side=tkinter.LEFT, anchor='nw')
+        self.mark_button.pack(side=tkinter.LEFT, anchor='nw')
+        self.next_button.pack(side=tkinter.LEFT, anchor='nw')
+        self.show_replace_dialog.pack(side=tkinter.LEFT, anchor='nw')
+        self.ins_list_button.pack(side=tkinter.LEFT, anchor='nw')
+        self.separator = tkinter.Frame(self.frame1, width=30)
+        self.separator.pack(side=tkinter.LEFT, anchor='nw', fill='y')
+
+        self.uniprot_button.pack(side=tkinter.RIGHT, anchor='ne')
+        self.plus_font_button.pack(side=tkinter.RIGHT, anchor='ne')
+        self.minus_font_button.pack(side=tkinter.RIGHT, anchor='ne')
+        self.t_editor.pack(side=tkinter.TOP, anchor='n', fill=tkinter.BOTH, expand=True)
+
+        self.main_window.bind('<Control-KeyPress-z>', self.undo)
+        self.main_window.bind('<Control-KeyPress-Z>', self.undo)
+        self.main_window.bind('<Control-space>', self.next_string)
+        self.main_window.bind('<Control-Return>', self.next_string)
+        self.main_window.bind('<Control-Tab>', self.split_line)
+        self.t_editor.bind('<Control-KeyPress-s>', self.split_line)
+        self.t_editor.bind('<Control-KeyPress-S>', self.split_line)
+        self.t_editor.bind('<Control-KeyPress-D>', self.duplicate_line)
+        self.t_editor.bind('<Control-KeyPress-d>', self.duplicate_line)
+        self.t_editor.bind('<Alt-KeyPress-s>', self.split_line)
+        self.t_editor.bind('<Alt-KeyPress-S>', self.split_line)
+        self.t_editor.bind('<Control-Alt-KeyPress-x>', self.mem_excision1)
+        self.t_editor.bind('<Control-Alt-KeyPress-X>', self.mem_excision1)
+        self.t_editor.bind('<Alt-KeyPress-x>', self.mem_excision1)
+        self.t_editor.bind('<Alt-KeyPress-X>', self.mem_excision1)
+        self.main_window.bind('<Alt-backslash>', self.move_to_description)
+        self.main_window.bind('<Control-backslash>', self.move_to_description)
+        self.t_editor.bind('<Alt-Home>', self.move_to_description_start)
+        self.t_editor.bind('<Alt-End>', self.alt_end)
+        self.t_editor.bind('<Control-Home>', self.move_to_description_start)
+
+        self.t_editor.bind('<Control-h>', self.show_replace_window)
+        self.t_editor.bind('<Control-H>', self.show_replace_window)
+        self.main_window.bind('<Alt-KeyPress-1>', self.insert_qualifier)
+        self.main_window.bind('<Alt-KeyPress-2>', self.insert_qualifier)
+        self.main_window.bind('<Alt-KeyPress-3>', self.insert_qualifier)
+        self.main_window.bind('<Alt-KeyPress-4>', self.insert_qualifier)
+        self.main_window.bind('<Alt-KeyPress-5>', self.insert_qualifier)
+        self.main_window.bind('<Alt-KeyPress-6>', self.insert_qualifier)
+        self.main_window.bind('<Alt-KeyPress-7>', self.insert_qualifier)
+        self.main_window.bind('<Alt-KeyPress-q>', self.insert_qualifier)
+        self.main_window.bind('<Alt-KeyPress-Q>', self.insert_qualifier)
+        self.main_window.bind('<Alt-KeyPress-w>', self.insert_qualifier)
+        self.main_window.bind('<Alt-KeyPress-W>', self.insert_qualifier)
+        self.main_window.bind('<Alt-KeyPress-e>', self.insert_qualifier)
+        self.main_window.bind('<Alt-KeyPress-E>', self.insert_qualifier)
+        self.main_window.bind('<Alt-KeyPress-A>', self.insert_qualifier)
+        self.main_window.bind('<Alt-KeyPress-a>', self.insert_qualifier)
+        self.main_window.bind('<Control-KeyPress-0>', self.ins_null)
+        self.main_window.bind('<Alt-KeyPress-0>', self.ins_null)
+        self.main_window.bind('<Control-decimalpoint>', self.ins1quest)
+        self.main_window.bind('<Control-slash>', self.ins1quest)
+        self.main_window.bind('<Control-Alt-decimalpoint>', self.ins2quest)
+        self.main_window.bind('<Control-Alt-slash>', self.ins2quest)
+        self.main_window.bind('<Alt-decimalpoint>', self.ins1quest)
+        self.main_window.bind('<Alt-slash>', self.ins1quest)
+        self.main_window.bind('<Control-minus->', self.ins_minus)
+        self.main_window.bind('<Alt-minus->', self.ins_minus)
+        self.main_window.bind('<Control-Alt-minus>', self.ins_2minus)
+        self.main_window.bind('<Control-plus>', self.ins_plus)
+        self.main_window.bind('<Alt-plus>', self.ins_plus)
+        self.main_window.bind('<Control-equal>', self.ins_plus)
+        self.main_window.bind('<Alt-equal>', self.ins_plus)
+        self.main_window.bind('<Control-Alt-plus>', self.ins_2plus)
+        self.main_window.bind('<Control-Alt-equal>', self.ins_2plus)
+        self.main_window.bind('<KeyPress>', self.on_edit)
+        self.main_window.bind('<F2>', self.show_uniprot_entry)
+        self.main_window.bind('<F4>', self.replace_words)
+        self.main_window.bind('<F6>', self.show_insert_list)
+        self.t_editor.bind('<Alt-KeyPress-c>', self.copy_activity_add)
+        self.t_editor.bind('<Alt-KeyPress-C>', self.copy_activity_add)
+        self.t_editor.bind('<Control-Alt-KeyPress-c>', self.copy_activity_split)
+        self.t_editor.bind('<Control-Alt-KeyPress-C>', self.copy_activity_split)
+        self.t_editor.bind('<Alt-KeyPress-v>', self.clipboard_to_activity_add)
+        self.t_editor.bind('<Alt-KeyPress-V>', self.clipboard_to_activity_add)
+        self.t_editor.bind('<Control-Alt-KeyPress-v>', self.clipboard_to_activity_split)
+        self.t_editor.bind('<Control-Alt-KeyPress-V>', self.clipboard_to_activity_split)
+        self.t_editor.bind('<Return>', self.return_check)
+        self.t_editor.bind('<Double-Button-1>', self.select_word)
+        self.t_editor.bind('<KeyPress-Escape>', self.clear_editor_tags)        
+        self.t_editor.bind('<Control-Double-Button-1>', self.alter_select_word)
+        self.t_editor.bind('<Double-Button-3>', self.next_string)
+        self.t_editor.bind('<Next>', self.next_string)
+        self.main_window.bind('<Alt-KeyPress-Right>', self.move_selection_right)
+        self.main_window.bind('<Alt-KeyPress-Left>', self.move_selection_left)
+        self.main_window.bind('<Control-Alt-KeyPress-Right>', self.alter_move_selection_right)
+        self.main_window.bind('<Control-Alt-KeyPress-Left>', self.alter_move_selection_left)
+        self.main_window.bind('<Control-KeyPress-Right>', self.next_word)
+        self.main_window.bind('<Control-KeyPress-Left>', self.previous_word)
+        self.main_window.bind('<Control-Shift-KeyPress-Left>', self.ctrl_select_left)
+        self.main_window.bind('<Control-Shift-KeyPress-Right>', self.ctrl_select_right)
+        self.main_window.bind('<Alt-period>', self.move_selection_right)
+        self.main_window.bind('<Alt-comma>', self.move_selection_left)
+        self.main_window.bind('<Control-Alt-period>', self.alter_move_selection_right)
+        self.main_window.bind('<Control-Alt-comma>', self.alter_move_selection_left)
+        # self.main_window.bind('<KeyPress>', self.store_inline_position)
+        self.t_editor.bind('<Control-Alt-u>', self.paste_same)
+
+        for num in range(10):
+            self.main_window.bind('<Control-Alt-KeyPress-{}>'.format(num), self.insert_popular)
+
+        self.main_window.protocol("WM_DELETE_WINDOW", self.on_exit)
+
+        self.filename = ''
+        self.position = -1
+        self.lines = []
+        self.undo_buffer = []
+        self.font_size = 12
+        self.started = False
+        self.excision1 = ['', 0]
+        self.STOP = True
+        self.upID = ''
+        self.timer = 0
+        self.effect_key_words = {}
+        self.mod_key_words = []
+        self.stored_current = []
+        self.stored_time = time.time()
+        self.stored_times = []
+        self.insert_list = []
+        self.descriptions_actions = {}
+        self.re_dict = {}
+        self.lines_to_store = []
+        self.initial_pos = 0
+
+    def StopEditor(self, full_stop=True):
+        self.close_replace_dialog()
+        self.main_window.destroy()
+        if full_stop:
+            sys.exit()
+
+
+    def load_file(self):
+        self.lines = open(self.filename, 'r', encoding='utf-8').readlines()
+
+    def load_str(self, pos=0):
+        for cur_pos, line in enumerate(self.lines[pos:]):
+            #print(cur_pos + pos, line.replace(ARW, '\t'))
+            for pattern in self.re_dict:
+                if re.search(pattern, line, re.I):
+                    print('pattern: ', pattern)
+                    print('line: ', line)
+                    return re.sub(pattern, self.re_dict[pattern], line).rstrip('\n') if self.re_dict[pattern] else line.rstrip('\n'), pos + cur_pos
+            self.store_line(line)
+        return '', -1
+
+    def StartEditor(self, f_name: str, f_pos: str):
+        f_pos = int(f_pos)
+        self.filename = f_name
+        self.t_editor.focus_force()
+        self.load_file()
+        self.re_dict = self.load_re()
+        self.next_string()
+        self.manage_gui()
+        # ------- load replace list ---
+        self.search_entry.delete(0, 'end')
+        self.replace_entry.delete(0, 'end')
+        search_list, replace_list = self.get_search_replace_list(work_dir=self.work_directory)
+        self.search_entry.insert(0, search_list)
+        self.replace_entry.insert(0, replace_list)
+        # -------- load insert list ---
+        self.insert_list = self.load_inserts()
+        self.main_window.mainloop()
+
+    def return_check(self, event: tkinter.Event):
+        return 'break'
+
+    def duplicate_line(self, _=''):
+        index, line = self.current
+        y = int(index.split('.')[0])
+        new_index = str(y - 1) + '.0'
+        self.t_editor.insert(new_index, line + '\n')
+        self.show_tabs()
+        return 'break'
+
+    def load_inserts(self):
+        buf = [line.strip('\n') for line in open(self.work_directory + 'inserts.lst', 'r')]
+        while len(buf) < 10:
+            buf.append('')
+        return buf
+
+    def show_insert_list(self, _=""):
+        for num, line in enumerate(self.insert_list):
+            self.insert_fields[num].delete(0, 'end')
+            self.insert_fields[num].insert(0, line)
+        self.ins_window.deiconify()
+        self.t_editor.focus_set()
+        return 'break'
+
+    def use_inserts(self, _=''):
+        for i in range(10):
+            self.insert_list[i] = self.insert_fields[i].get()
+        with open(self.work_directory+'inserts.lst', 'w', encoding='utf-8') as wfile:
+            for line in self.insert_list:
+                wfile.write(line+'\n')
+
+    def reset_insert_fields(self):
+        for i in range(10):
+            self.insert_fields[i].configure(bg='white')
+
+    def insert_popular(self, event):
+        if event.keysym in '1234567890':
+            number = int(event.keysym)
+            self.insert_fields[number].configure(bg='green')
+            self.main_window.after(100, self.reset_insert_fields)
+            self.insert_from_list(number)
+            self.add_undo_point()
+            return 'break'
+
+    def insert_from_list(self, number: int):
+        if number < len(self.insert_list):
+            sel_range = self.t_editor.tag_ranges(tkinter.SEL)
+            if sel_range:
+                self.t_editor.delete(*sel_range)
+            pos, _ = self.current
+            self.t_editor.insert(pos, self.insert_list[number])
+        return 'break'
+
+    @property
+    def processed(self):  # check, how much lines from current source file have been processed already
+        try:
+            return len(open(self.filename.rsplit('.')[0]+'_processed.tsv', 'r').readlines())
+        except FileNotFoundError:
+            return 0
+    
+    def store_current(self, _=''):
+        self.stored_current = self.current
+    
+    @staticmethod
+    def get_search_replace_list(work_dir: str):
+        try:
+            with open(work_dir + 'rep.lst', 'r') as sr_file:
+                buf = sr_file.readlines()
+                search_list = [pair.split('->')[0].strip('[]\n') for pair in buf]
+                replace_list = [pair.split('->')[1].strip('[]\n') for pair in buf]
+            return ['|'.join(search_list), '|'.join(replace_list)]
+        except:
+            #  FileNotFoundError:
+            return ['', '']
+
+    def focus_set_wrp(self, _=''):
+        self.search_field.focus_set()
+    
+    def copy_to_clipboard(self, _=''):
+        if self.t_editor.tag_ranges('sel'):
+            line = self.t_editor.selection_get()
+            self.main_window.clipboard_clear()
+            self.main_window.clipboard_append(line)
+
+    @property
+    def work_directory(self):
+        directory = os.path.dirname(__file__)
+        if not directory:
+            directory = os.path.dirname(os.path.realpath(__file__))
+        splitter = '\\' if platform.system() == 'Windows' else '/'
+        return directory.replace('/', splitter) + splitter   # + splitter
+
+    @staticmethod
+    def check_files(directory_name: str):
+        necessary_files = ['processing.mem', 'effects.lst', 'rep.lst', 'modifiers.lst', 'help.txt', 'inserts.lst']
+        return {file_name: os.path.exists(directory_name + file_name) for file_name in necessary_files}
+
+    def manage_gui(self):
+
+        if self.STOP:
+#            self.load_file_button.configure(state='normal')
+            self.next_button.configure(state='disable')
+            self.split_button.configure(state='disable')
+#            self.reload_string_button.configure(state='disable')
+            self.undo_button.configure(state='normal')
+#            self.jump_button.configure(state='normal')
+            self.mark_button.configure(state='disable')
+        else:
+#            self.load_file_button.configure(state='normal')
+            self.next_button.configure(state='normal')
+            self.split_button.configure(state='normal')
+            self.main_window.title(self.filename)
+#            self.reload_string_button.configure(state='normal')
+#            self.jump_button.configure(state='normal')
+            if len(self.undo_buffer) > 0:
+                self.undo_button.configure(state='normal')
+            else:
+                self.undo_button.configure(state='disable')
+
+    def clear_tags(self, _=''):
+        for tag in self.help_txt_box.tag_names():
+            self.help_txt_box.tag_delete(tag)
+
+    @staticmethod
+    def descriptors_location(line: str):
+        pattern = '[A-z]+\|\d+\-\d+\|[A-z]+(.+?)\|'
+        left_part = re.search(pattern, line)
+        if left_part:
+            return left_part.regs[1][1]
+        else:
+            return -1
+
+    @property
+    def current(self):
+        y, x = self.t_editor.index(tkinter.INSERT).split('.')
+        line = self.t_editor.get(y + '.0', y + '.end')        
+        return [y + '.' + x, line.replace(ARW, '\t')]
+
+    def text_search(self, _=''):
+        self.clear_tags()
+        first_mark = False
+        pattern = self.search_field.get()
+        if pattern:
+            pos = '1.0'
+            while pos:
+                self.help_txt_box.tag_configure("highlight", background="lightblue")
+                search_count = tkinter.StringVar()
+                pos = self.help_txt_box.search(pattern, pos, stopindex="end", count=search_count, nocase=1)
+                if pos:
+                    if not first_mark:
+                        self.help_txt_box.mark_set('insert', pos)
+                        self.help_txt_box.see('insert')
+                        first_mark = True
+
+                    y, x = pos.split('.')
+                    x2 = int(x) + int(search_count.get())
+                    pos2 = y + '.' + str(x2)
+                    self.help_txt_box.tag_add("highlight", pos, pos2)
+                    pos = pos2
+
+    def on_edit(self, event):
+        self.store_current()
+        if not (event.keysym in ('Control_L', 'Control_R', 'Alt_L', 'Alt_R', 'Left', 'Right', 'Up', 'Down', 'Shift_L',
+                                 'Shift_R')):            
+            # self.t_editor.tag_remove('highlight', '1.0', tkinter.END)
+            # self.excision1 = ['', 0]
+            self.add_undo_point()
+        self.manage_gui()
+
+
+    def plus_font(self):
+        self.font_size += 1
+        self.t_editor.configure(font=('Courier', self.font_size))
+        self.help_txt_box.configure(font=('Courier', self.font_size))
+
+    def minus_font(self):
+        self.font_size -= 1
+        self.t_editor.configure(font=('Courier', self.font_size))
+        self.help_txt_box.configure(font=('Courier', self.font_size))
+
+    def help(self, _=''):
+        with open(self.work_directory + 'help.txt', 'r', encoding='utf-8') as rf:
+            self.help_txt_box.delete('1.0', 'end')
+            self.help_txt_box.insert('1.0', rf.read())
+            self.help_window.deiconify()
+            self.help_window.tkraise()
+
+    def show_uniprot_entry(self, _=None):
+        def show():
+            line = self.t_editor.get('1.0', 'end')
+            found = re.search('[A-Z]\d([A-Z0-9]{2,3}\d){1,2}', line)
+            up_id = found.group() if found else ''
+            self.help_txt_box.delete('1.0', 'end')
+            message = self.get_up_entry(up_id)
+            self.help_txt_box.insert('1.0', message)
+            self.help_window.deiconify()
+            # self.search_field.focus_set()
+            self.help_window.tkraise()
+            self.t_editor.focus_set()
+        newthread = threading.Thread(target=show)
+        newthread.start()
+
+    @staticmethod
+    def get_up_entry(accession: str):
+        message = ''
+        if accession:
+            try:
+                handle = request.urlopen('http://www.uniprot.org/uniprot/{}.txt'.format(accession))
+                if handle:
+                    buf = handle.readlines()
+                    uniprot_name = filter(lambda x: x.startswith('DE'), list(map(bytes.decode, buf)))
+                    uniprot_info = filter(lambda x: x.startswith('CC'), list(map(bytes.decode, buf)))
+
+                    uniprot_name = '\n'.join(map(lambda x: x.replace('\n', '').split('=' if '=' in x else ':')[1],
+                                             uniprot_name))
+                    uniprot_info = ' '.join(map(lambda x: x.replace('\n', '').replace('CC   ', '').
+                                                replace('-!- ', '\n\n').lstrip(' '), uniprot_info))
+                    message = 'UniProt ID: {}\n{}\n{}'.format(accession, uniprot_name, uniprot_info)
+            except request.URLError:
+                message = "Connection error: UniProt database isn't accessible."
+        return message
+
+    def ins2quest(self, _=''):
+        self.t_editor.tag_remove(tkinter.SEL, '1.0', tkinter.END)
+        current_position, line = self.current
+        cy = current_position.split('.')[0]
+        x = self.descriptors_location(line)
+        if x != -1:
+            shift = re.search('(\|.*?\|)([^|]*)', line[x:])
+            if shift:
+                shift_length = shift.regs[2][1] - shift.regs[2][0]
+                insertion_x = str(x + shift.regs[1][1] + shift_length)
+                self.t_editor.insert(cy + '.' + insertion_x, '?')
+                self.add_undo_point()
+                new_position = cy + '.' + str(int(insertion_x) + 1)
+                self.t_editor.mark_set(tkinter.INSERT, new_position)
+                self.store_current()
+
+    @property
+    def clipboard(self):
+        try:
+            return self.main_window.clipboard_get()
+        except tkinter.TclError:
+            return ''
+
+    def paste_same(self, _=''):
+        insertion = self.upID
+        self.t_editor.tag_remove(tkinter.SEL, '1.0', tkinter.END)
+        current_position, line = self.current
+        cy = current_position.split('.')[0]
+        x = self.descriptors_location(line)
+        if x != -1:
+            shift = re.search('(\|.*?\|)([^|]*)', line[x:])
+            if shift:
+                shift_length = shift.regs[2][1] - shift.regs[2][0]
+                insertion_x = str(x + shift.regs[1][1] + shift_length)
+
+                self.t_editor.insert(cy + '.' + insertion_x, insertion)
+                self.add_undo_point()
+                new_position = cy + '.' + str(int(insertion_x) + len(insertion))
+                self.t_editor.mark_set(tkinter.INSERT, new_position)
+                self.store_current()
+
+    def paste(self):
+        current_position = self.current[0]
+        self.t_editor.insert(current_position, self.clipboard)
+        self.add_undo_point()
+        return 'break'
+
+    def clipboard_to_activity_add(self, _=''):
+        self.clipboard_to_activity(mode='add')
+        return 'break'
+
+    def clipboard_to_activity_split(self, _=''):
+        self.clipboard_to_activity(mode='split')
+        return 'break'
+
+    def clipboard_to_activity(self, mode: str):
+        insertion = self.clipboard
+        self.t_editor.tag_remove(tkinter.SEL, '1.0', tkinter.END)
+        current_position, line = self.current
+        cy = current_position.split('.')[0]
+        x = self.descriptors_location(line)
+        spacers = {'add': ' ', 'split': ';'}
+        if x != -1:
+            shift = re.search('(\|.*?\|)([^|]*)', line[x:])
+            if shift:
+                shift_length = shift.regs[2][1] - shift.regs[2][0]
+                space = spacers[mode] if shift_length > 0 and shift.group()[-1] not in (' ', ';') else ''
+                insertion_x = str(x + shift.regs[1][1] + shift_length)
+                self.t_editor.insert(cy + '.' + insertion_x, space+insertion)
+                self.add_undo_point()
+                # new_position = cy + '.' + str(int(insertion_x) + len(insertion))
+                # self.t_editor.mark_set(tkinter.INSERT, new_position)
+                self.store_current()
+        return "break"
+
+    def copy_activity_add(self, _=''):
+        self.copy_activity(mode='add')
+        return 'break'
+
+    def copy_activity_split(self, _=''):
+        self.copy_activity(mode='split')
+        return 'break'
+
+    def copy_activity(self, mode: str):
+        sel_range = self.t_editor.tag_ranges('sel')
+        activity = self.t_editor.get(*sel_range).replace(ARW, ' ') if sel_range else ''
+        pos, line = self.current
+        cy = pos[0].split('.')[0]
+        x = self.descriptors_location(line)
+        spacers = {'add': ' ', 'split': ';'}
+        if x != -1:
+            shift = re.search('(\|.*?\|)([^|]*)', line[x:])
+            if shift:
+                shift_length = shift.regs[2][1] - shift.regs[2][0]
+                space = spacers[mode] if shift_length > 0 and shift.group()[-1] not in (' ', ';') else ''
+                insertion_x = str(x + shift.regs[1][1] + shift_length)
+                self.t_editor.insert(cy + '.' + insertion_x, space + activity )
+                self.add_undo_point()
+                self.t_editor.tag_remove(tkinter.SEL, '1.0', 'end')
+                # new_position = cy + '.' + str(int(insertion_x) + len(activity))
+                # self.t_editor.mark_set(tkinter.INSERT, new_position)
+                return 'break'
+
+    def alt_end(self, _=''):
+        pos, line = self.current
+        cy = pos[0].split('.')[0]
+        x = self.descriptors_location(line)
+        if x != -1:
+            shift = re.search('(\|.*?\|)([^|]*)', line[x:])
+            if shift:
+                shift_length = shift.regs[2][1] - shift.regs[2][0]
+                insertion_x = str(x + shift.regs[1][1] + shift_length)
+                self.t_editor.tag_remove(tkinter.SEL, '1.0', 'end')
+                self.t_editor.mark_set(tkinter.INSERT, cy + '.' + insertion_x)
+                return 'break'
+
+    def insert_int(self):
+        self.insert_qualifier(grade='INT')
+
+    def insert_ind(self):
+        self.insert_qualifier(grade='IND')
+
+    def insert_enz(self):
+        self.insert_qualifier(grade='ENZ')
+
+    def insert_phe(self):
+        self.insert_qualifier(grade='PHE')
+
+    def insert_loc(self):
+        self.insert_qualifier(grade='LOC')
+
+    def insert_cha(self):
+        self.insert_qualifier(grade='CHA')
+
+    def insert_unk(self):
+        self.insert_qualifier(grade='UNK')
+
+    def insert_qualifier(self, event=None, grade=''):
+        if grade:
+            insertion = grade
+        else:
+            keysym_effect = list(zip(['1', '2', '3', '4qQ', '5wW', '6eE', '7aA'],
+                                     ['INT', 'IND', 'ENZ', 'PHE', 'LOC', 'UNK', 'CHA']))
+            insertion = next(filter(lambda xx: event.keysym in xx[0], keysym_effect))[1]
+        # self.t_editor.tag_remove(tkinter.SEL, '1.0', tkinter.END)
+        current_position, line = self.current
+        cy = current_position.split('.')[0]
+        x = self.descriptors_location(line)
+        if x != -1:
+            before = ';' if line[x - 3:x] in ('INT', 'IND', 'ENZ', 'PHE', 'LOC', 'UNK', 'CHA') else ''
+            insert_position = cy + '.' + str(x)
+            self.t_editor.insert(insert_position, before + insertion)
+            self.add_undo_point()
+            # new_position = cy + '.' + str(x + len(before) + 3)
+            # self.t_editor.mark_set(tkinter.INSERT, new_position)
+        return 'break'
+
+    def set_grade(self, grade='0', line_number=-1, replace=False, can_nulify=True):
+        self.t_editor.tag_remove(tkinter.SEL, '1.0', tkinter.END)
+        if line_number == -1:
+            current_position, line = self.current
+            cy = current_position.split('.')[0]
+        else:
+            cy = str(line_number)
+
+        line = self.t_editor.get(cy + '.0', cy + '.end')
+
+        x = self.descriptors_location(line)
+        shift = re.search('\|([-+ 0?]*)', line[x:] if x > -1 else '')
+        if shift:
+            shift_length = len(shift.group(1))
+            current_grade = shift.group(1)
+            if grade == '' and can_nulify is False:
+                grade = current_grade
+
+            if replace or current_grade != grade or not(current_grade in ('-', '+')):
+                self.t_editor.delete(cy + '.' + str(x + 1), cy + '.' + str(x + 1 + shift_length))
+
+            insertion_x = str(x + 1)
+            self.t_editor.insert(cy + '.' + insertion_x, grade)
+            self.add_undo_point()
+            # new_position = cy + '.' + str(x + 1)
+            # self.t_editor.mark_set(tkinter.INSERT, new_position)
+            self.t_editor.tag_remove(tkinter.SEL, '1.0', tkinter.END)
+
+    def ins1quest(self, _=''):
+        self.set_grade('?')
+
+    def ins_null(self, _=''):
+        self.set_grade('0')
+
+    def ins_minus(self, _=''):
+        self.set_grade('-')
+
+    def ins_2minus(self, _=''):
+        self.set_grade('--')
+
+    def ins_plus(self, _=''):
+        self.set_grade('+')
+
+    def ins_2plus(self, _=''):
+        self.set_grade('++')
+
+    def move_to_description(self, _=''):
+        y = self.t_editor.index(tkinter.INSERT).split('.')[0]
+        line = self.t_editor.get(str(y) + '.0', str(y) + '.end')
+        x = self.descriptors_location(line)
+        if x != -1:
+            self.t_editor.mark_set(tkinter.INSERT, y + '.' + str(x))
+
+    def move_to_description_start(self, _=''):
+        pos, line = self.current
+        line = line.replace(ARW, '\t')
+        y, x = pos.split('.')
+        # y = str(self.t_editor.index(tkinter.INSERT).split('.')[0])
+        x = int(x)
+        pos = re.search('\t.+?\t', line)
+        if pos:
+            x = pos.end()
+        self.t_editor.mark_set(tkinter.INSERT, y + '.' + str(x))
+        self.save_position()
+        return 'break'
+        
+    @staticmethod
+    def alt_index(line: str, stops: str):
+        indexes = [line.index(key) for key in stops if key in line]
+        return min(indexes) if indexes else len(line)
+
+    @staticmethod
+    def alt_rindex(line: str, stops: str):
+        indexes = [line.rindex(key) for key in stops if key in line]
+        return max(indexes) if indexes else 0
+
+    @staticmethod
+    def words_positions(line: str, delimiter: str):
+        starts = []
+        for pos, key in enumerate(line):
+            if key != delimiter and (pos == 0 or line[pos - 1] == delimiter):
+                starts.append(pos)
+        if not starts:
+            starts.append(0)
+        pairs = []
+        for start in starts:
+            if delimiter in line[start:]:
+                end = start + line[start:].index(delimiter)-1
+            else:
+                end = len(line) - 1
+            pair = (start, end)
+            pairs.append(pair)
+        return list(filter(lambda x: x[1]-x[0] > 0, pairs))
+
+    def next_word(self, _=''):        
+        self.move_sel(mode='common', direction='r', select=False)
+        return 'break'
+        
+    def previous_word(self, _=''):
+        self.move_sel(mode='common', direction='l', select=False)
+        return 'break'
+
+    def ctrl_select_right(self, _=''):
+        return 'break'
+
+    def ctrl_select_left(self, _=''):
+        return 'break'
+
+    @staticmethod
+    def current_word_location(locations: list, line_pos: int):
+        for i, loc in enumerate(locations):
+            if loc[0] < line_pos <= loc[1]:
+                return [i]
+        for i in range(len(locations)-1):
+            if locations[i][1] < line_pos <= locations[i+1][0]:
+                return [i, i + 1]
+        if line_pos <= locations[0][0]:
+            return [0]
+        if line_pos > locations[-1][1]:
+            return [len(locations) - 1]
+        return -1
+
+    @staticmethod
+    def next_word_location(locations: list, index, direction: str):
+        if index == -1:
+            return [-1, -1]
+        #  step = 1 if direction == 'r' else -1
+        if len(index) == 1:
+            return locations[index[0]]
+        else:
+            return locations[index[0 if direction == 'l' else 1]]
+
+    def move_sel(self, direction: str, select=True, mode='external'):
+        stops = {'common': STOP_SEQUENCE, 'special': BIG_STOP_SEQUENCE}
+        self.t_editor.tag_remove(tkinter.SEL, '1.0', 'end')
+        stop_sequence = stops[mode]
+        stored_pos, line = self.stored_current
+        y, x = stored_pos.split('.')
+        x = int(x)
+        line = ''.join([i if i not in stop_sequence else '|' for i in line])
+        locations = self.words_positions(line, '|')
+        current_word_number = self.current_word_location(locations, x)
+        sel_s, sel_e = self.next_word_location(locations, current_word_number, direction)
+        if sel_s == -1 or sel_e == -1:
+            return 'break'
+        spc = 1
+        new_pos = '{}.{}'.format(y, (sel_e + spc) if direction == 'r' else sel_s)
+        self.t_editor.mark_set(tkinter.INSERT, new_pos)
+        self.stored_current[0] = new_pos
+        if select:
+            self.t_editor.tag_add(tkinter.SEL, '{}.{}'.format(y, sel_s), '{}.{}'.format(y, sel_e + spc))
+
+        return 'break'
+
+    def move_selection_right(self, _=''):
+        self.move_sel(mode='common', direction='r')
+        return 'break'
+
+    def alter_move_selection_right(self, _=''):
+        self.move_sel(mode='special', direction='r')
+        return 'break'
+
+    def move_selection_left(self, _=''):
+        self.move_sel(mode='common', direction='l')
+        return 'break'
+
+    def alter_move_selection_left(self, _=''):
+        self.move_sel(mode='special', direction='l')
+        return 'break'
+
+    def pass_actions(self, _=''):
+        return 'break'
+
+    def clear_editor_tags(self, _=''):
+        self.t_editor.tag_remove('highlight', '1.0', tkinter.END)
+        self.t_editor.tag_remove(tkinter.SEL, '1.0', tkinter.END)
+        self.excision1 = ['', 0]
+
+    def show_tabs(self, _=''):
+        bb = self.t_editor.get('1.0', 'end').strip('\n')
+        showing = bb.replace('\t', ARW)
+        if showing != bb:
+            self.t_editor.delete('1.0', 'end')
+            self.t_editor.insert('1.0', showing)
+        self.t_editor.focus_set()
+
+    def add_undo_point(self, _='', source_string='', mode='add'):
+        if source_string != '':
+            bb = source_string.strip('\n')
+        else:
+            bb = self.t_editor.get('0.0', 'end').strip('\n')
+
+        if bb and bb not in self.undo_buffer[-1:]:
+            if len(self.undo_buffer) > 100:
+                self.undo_buffer.pop(0)
+            elif mode == 'replace':
+                self.undo_buffer.clear()
+            self.undo_buffer.append(bb)
+            self.show_tabs()
+            self.manage_gui()
+
+    def undo(self, _=''):
+        current_position = self.current[0]
+        if len(self.undo_buffer) > 1:
+            self.t_editor.delete('1.0', 'end')
+            _ = self.undo_buffer.pop()
+            self.t_editor.insert('1.0', self.undo_buffer[-1])
+            self.show_tabs()
+        self.manage_gui()
+        self.t_editor.mark_set(tkinter.INSERT, current_position)
+
+    def show_replace_window(self, _=''):
+        self.replace_window.deiconify()
+        self.replace_window.tkraise()
+        self.search_entry.focus_set()
+        return 'break'
+
+    def replace_words(self, _=''):
+        location = self.current[0]
+        search_list = self.search_entry.get().split('|')
+        replace_list = self.replace_entry.get().split('|')
+        text = self.t_editor.get('1.0', 'end')
+
+        if len(search_list) != len(replace_list):
+            messagebox.showerror('Error in search list', 'List of search targets and list of replacements have '
+                                                         'unequal length!')
+        else:
+            for index, a in enumerate(search_list):
+                b = replace_list[index]
+                if not a.startswith('re#'):
+                    text = text.replace(a, b)
+                else:
+                    text = re.sub(a.replace('re#', ''), b, text)
+
+        self.t_editor.delete('1.0', 'end')
+        self.add_undo_point()
+        self.t_editor.insert('1.0', text.rstrip('\n'))
+        self.add_undo_point()
+
+        self.t_editor.mark_set(tkinter.INSERT, location)
+        return 'break'
+
+    def close_replace_dialog(self, _=''):
+        with open(self.work_directory + 'rep.lst', 'w', encoding='utf-8') as writing_file:
+            search_list = self.search_entry.get().split('|')
+            replace_list = self.replace_entry.get().split('|')
+            writing_file.write('\n'.join(['->'.join(map(lambda x: '[' + x + ']', line)) for line in zip(search_list, 
+                                                                                                        replace_list)]))
+        self.replace_window.withdraw()
+
+    def alter_select_word(self, _=''):
+        self.select(stop_sequence=BIG_STOP_SEQUENCE)
+        return 'break'
+
+    def select_word(self, _=''):
+        self.select(stop_sequence=STOP_SEQUENCE)
+        return 'break'
+
+    def select(self, stop_sequence: str):
+        self.t_editor.tag_remove(tkinter.SEL, '1.0', tkinter.END)
+        current_position, line_buffer = self.current
+        y = int(current_position.split('.')[0])
+        start = int(current_position.split('.')[1])
+        finish = int(current_position.split('.')[1])
+        while start > 0 and not (line_buffer[start - 1] in stop_sequence):
+            start -= 1
+        while finish < len(line_buffer) and not (line_buffer[finish] in stop_sequence):
+            finish += 1
+        self.t_editor.tag_add(tkinter.SEL, str(y) + '.' + str(start), str(y) + '.' + str(finish), tkinter.END)
+
+    def mem_excision1(self, _=''):
+        if self.t_editor.tag_ranges('sel'):
+            self.t_editor.tag_remove('highlight', '1.0', tkinter.END)
+            self.excision1 = ['', 0]
+            selection_start = self.t_editor.index('sel.first')
+            selection_end = self.t_editor.index('sel.last')
+            self.excision1 = [self.t_editor.get(selection_start, selection_end).replace(ARW, '\t'),
+                              int(selection_start.split('.')[1])]
+            self.t_editor.tag_configure("highlight", background="red")
+            self.t_editor.tag_add("highlight", selection_start, selection_end)
+            self.t_editor.tag_remove(tkinter.SEL, '1.0', tkinter.END)
+        return 'break'
+
+    def split_line(self, _=''):
+        if self.t_editor.tag_ranges('sel'):
+
+            parts_linkers = ['but ', ',', 'and ', 'or ', 'nor ', 'Leading to']
+
+            garb_pairs = [(' on or on ', 'on'), (' on on ', ' on '), (' onon ', ' on '), (' to to ', ' to '),
+                          ('  ', ' '), (' on nor ', ' on '), (' with with ', ' with '), (' in in ', ' in '),
+                          (' of of ', ' of '), ('\t ', '\t'), (' \t', '\t'), (' ;', ';'), (' the the ', ' the ')]
+
+            splitter = {True: self.split1, False: self.split2}  # two variants of split function
+            selection_start = self.t_editor.index('sel.first')
+            selection_end = self.t_editor.index('sel.last')
+            selection_y_f, selection_x_f = selection_start.split('.')
+            selection_y_l, selection_x_l = selection_end.split('.')
+            y_pos = selection_y_f
+            cursor_pos, _ = self.current
+            selection = [int(selection_y_f), int(selection_x_f), int(selection_y_l), int(selection_x_l)]
+            line = self.t_editor.get(y_pos + '.0', y_pos + '.end').replace(ARW, '\t').strip(PRF)
+            new_lines = splitter[self.excision1[0] == ''](line, selection, self.excision1, parts_linkers, garb_pairs)
+            if not new_lines:
+                self.t_editor.tag_remove('highlight', '1.0', tkinter.END)
+                self.excision1 = ['', 0]
+                return None
+            self.t_editor.delete(y_pos + '.0', y_pos+'.end')
+            self.t_editor.insert(y_pos + '.0', '\n'.join(new_lines))
+            self.add_undo_point()
+            self.t_editor.mark_set(tkinter.INSERT, cursor_pos)
+            self.t_editor.tag_remove('highlight', '1.0', tkinter.END)
+            self.excision1 = ['', 0]
+
+    @staticmethod
+    def _starts_with_any(line: str, lst: list):
+        for l in lst:
+            if line.lower().startswith(l.lower()):
+                return True, l
+        return False, ''
+
+    @staticmethod
+    def _include_any(line: str, lst: list):
+        for g, rep in lst:
+            if g.lower() in line.lower():
+                return True, g, rep
+        return False, '', ''
+
+    @staticmethod
+    def post_process(line: str, garbage_pairs: list):
+        included = True
+        while included:
+            included, g, rep = StringEditor._include_any(line, garbage_pairs)
+            line = re.sub(g, rep, line, flags=re.I)
+        return line
+
+    @staticmethod
+    def clear_part_linkers(line: str, part_linkers: list):
+        starts_with_pl = True
+        while starts_with_pl:
+            starts_with_pl, pl = StringEditor._starts_with_any(line, part_linkers)
+            line = re.sub(pl, '', line, count=1, flags=re.I).strip(' ')
+        return line
+
+    @staticmethod
+    def exclude_association(line: str, a_mark: str):
+
+        if line.strip(' ;').startswith(a_mark):
+            aa = StringEditor.get_aa(line.split(a_mark)[1]).split(';')
+            if aa and aa[-1] in line:
+                part0, rp = line.split(aa[-1])
+                ap = '; ' + part0.lstrip(' ;') + aa[-1]
+                return rp, ap, True
+            else:
+                return line, '', True
+        else:
+            if a_mark in line:
+                rp, a = line.split(a_mark)
+                return rp, '; ' + a_mark + a, False
+            else:
+                return line, '', False
+
+    @staticmethod
+    def split1(line: str, selection: list, _: list, parts_linkers: list, garbage_pairs: list):
+        selection_y_f, selection_x_f, selection_y_l, selection_x_l = selection
+        excision = line[selection_x_f: selection_x_l].strip('/\\').lstrip(')').rstrip('(')
+
+        a_mark = 'When associated ' if 'When associated ' in line else 'when associated '
+
+        buf = re.search('\t([^|]+?)\t', line)
+        description = re.split(a_mark, buf.group(1), re.I)[0].rstrip('; ') if buf else ''
+        if excision in description:
+            left_part = line[:selection_x_f].rstrip('/\\(;').lstrip(')').strip(' ')
+            right_part, ending = line[selection_x_l:].rsplit('\t', 1)
+            right_part, associate_part, only_r_p = StringEditor.exclude_association(right_part, a_mark)
+            right_part = StringEditor.clear_part_linkers(right_part.strip('\t; '), parts_linkers)
+
+            if left_part[-1] == '\t' and right_part.lower()[0] in ALPHABET:
+                right_part = right_part[0].capitalize() + right_part[1:]
+
+            e_sel = {'a': {False: associate_part, True: ''}, 'e': {False: ending, True: '|||¶'}}
+
+            new_line1 = StringEditor.post_process('{} {}{}\t{}'.format(left_part, excision.rstrip(';'),
+                                                                       e_sel['a'][only_r_p], e_sel['e'][only_r_p]),
+                                                  garbage_pairs).strip(PRF)+PRF
+            new_line2 = StringEditor.post_process('{} {}{}\t{}'.format(left_part, right_part, associate_part, ending),
+                                                  garbage_pairs).strip(PRF)+PRF
+            return [new_line1.rstrip(PRF), new_line2.rstrip(PRF)]
+        return []
+
+    @staticmethod
+    def split2(line: str, selection: list, excision: list, parts_linkers: list, garbage_pairs: list):
+
+        selection_y_f, selection_x_f, selection_y_l, selection_x_l = selection
+
+        excision2 = line[selection_x_f: selection_x_l].strip(' \t')
+        excision1 = excision[0]
+
+        a_mark = 'When associated ' if 'When associated ' in line else 'when associated '
+
+        buf = re.search('\t([^|]+?)\t', line)
+        description = buf.group(1) if buf else ''
+        description = re.split(a_mark, description, re.I)[0].rstrip('; ')
+
+        if excision1 in description and excision2 in description:  # and not(excision2 in excision1):
+            left_part = line[:excision[1]].rstrip('/\\(').strip(' ')
+            right_part, ending = line[selection_x_l:].rsplit('\t', 1)
+            right_part, associate_part, orp = StringEditor.exclude_association(right_part, a_mark)
+
+            if not orp:
+                right_part = StringEditor.clear_part_linkers(right_part.strip('\t; '), parts_linkers)
+                excision2 = StringEditor.clear_part_linkers(excision2, parts_linkers)
+
+                if left_part[-1] == '\t' and excision1.lower()[0] in ALPHABET:
+                    excision1 = excision1[0].capitalize() + excision1[1:]
+                if left_part[-1] == '\t' and excision2.lower()[0] in ALPHABET:
+                    excision2 = excision2[0].capitalize() + excision2[1:]
+
+                new_line1 = StringEditor.post_process('{} {} {}{}\t{}'.format(left_part, excision1,
+                                                                              right_part, associate_part,
+                                                                              ending), garbage_pairs).strip(PRF)+PRF
+                new_line2 = StringEditor.post_process('{} {} {}{}\t{}'.format(left_part, excision2,
+                                                                              right_part, associate_part,
+                                                                              ending), garbage_pairs).strip(PRF)+PRF
+                return [new_line1.rstrip(PRF), new_line2.rstrip(PRF)]
+        return []
+
+    def next_string(self, _=''):
+        #self.lines_to_store.extend(self.t_editor.get('1.0', 'end').split('\n'))
+        buf = self.t_editor.get('1.0', 'end')
+
+        if self.position != -1:
+            self.store_line(buf, verbal=True)
+        self.t_editor.delete('1.0', 'end')
+        self.main_window.deiconify()
+        
+        position = self.position + 1 if (self.position + 1) >= self.initial_pos else self.initial_pos
+        
+        new_line, new_pos = self.load_str(pos=position)
+        if new_line != '':
+            self.t_editor.insert('1.0', new_line.replace('\t', ARW))
+            self.position = new_pos
+            self.STOP = False
+            self.manage_gui()
+        else:
+            messagebox.showinfo('', 'End of file reached')
+            self.STOP = True
+            #self.store_lines()
+            self.StopEditor(full_stop=False)
+
+    def store_line(self, line: str, verbal=False):
+        if line:
+            ch_name = self.filename.replace('.tsv', '_checked.tsv')
+            mode = 'a' if os.path.isfile(ch_name) else 'w'
+            lines = list(filter(lambda x: x, line.replace(ARW, '\t').replace('\t ', '\t').replace(' \t', ' \t').split('\n')))
+
+            for i in range(len(lines)):
+                lines[i] = lines[i].rstrip('\n').rstrip('|')
+            line = '\n'.join(lines) + '\n'
+
+            if verbal:
+                print(self.position, line)
+            with open(ch_name, mode, encoding='utf-8') as wfile:
+                wfile.write(line)
+
+
+    def on_exit(self, _=''):
+        if self.filename != '' and messagebox.askyesno('', 'Do You really want to quit?'):
+            self.StopEditor()
+        else:
+            pass
+
+    def clear_undo(self):
+        self.undo_buffer = []
+
+    @staticmethod
+    def get_aa(line: str):
+        regex_pattern = re.compile('(\d+-[a-z]+-*[A-z]+-\d+)|[ .,;\t\n]([a-z]+-\d+)[ .,;!\t\n]'
+                                   '|([a-z]+-\d+-*\d+-[a-z]+)|[ .,;\t\n](\d+-[a-z]+)[ .,;!\t\n]', re.IGNORECASE)
+        aa_list = regex_pattern.findall(line)
+        buf = []
+        for pair in aa_list:
+            buf.extend(pair)
+        aa_list = filter(lambda x: x, buf)
+        return ';'.join(aa_list)
+
+    def load_re(self):
+        with open(self.work_directory + 'autocheck.lst', 'r') as r_file:
+            file_buffer = r_file.readlines()
+            return {i.split('\t')[0]: i.split('\t')[1].replace('\n', '') for i in file_buffer}
+
+
+def main():
+    #cProfile.run('StringEditor().StartEditor()', 'results.stat')
+    #pstats.Stats('results.stat').sort_stats('cumulative').print_stats()
+    file_name = ''
+
+    pos_number = -1
+    if '-n' in sys.argv:
+        index = sys.argv.index('-n') + 1
+        if len(sys.argv) > index:
+            pos_number = int(sys.argv[index]) if sys.argv[index].isdigit() else 0
+
+    if '--check' in sys.argv:
+        index = sys.argv.index('--check') + 1
+        if len(sys.argv) > index:
+            file_name = sys.argv[index]
+            if os.path.isfile(file_name):
+                StringEditor().StartEditor(f_name=file_name, f_pos=pos_number)
+            elif os.path.isdir(file_name):
+                for name in os.listdir(file_name):
+                    print(name)
+                    long_name = file_name + name
+                    StringEditor().StartEditor(f_name=long_name, f_pos='0')
+
+main()

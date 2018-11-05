@@ -1,0 +1,22 @@
+\t\|[0?+-;]*?	
+(of function.+\t)ENZ	\1UNK;ENZ
+INT;ENZ	
+ENZ;INT	
+(retain.*)0	\1?
+(E3 ubiquitin.+\|)ubiquitin	\1E3 ubiquitin
+(does not abolish.*)0	\1?
+\|\|\|	
+( o[fn] activity *[\t;])ENZ	\1UNK;ENZ
+( o[fn] activity by.+\t)ENZ	\1UNK;ENZ
+(e[sd] activity\t)ENZ	\1UNK;ENZ
+(e[sd] activity by.+\t)ENZ	\1UNK;ENZ
+inactiv\tENZ	
+(%.*\|)--	\1-
+\t\t	\t
+(.*?)(\t.*)same protein	\1\2\1
+(constitutively active.+?\t.*?\|)\+\|	\1?\|
+constitutively	
+UNK;INT	
+INT;UNK	
+(INT|ENZ|IND|CHA)[A-Z;]*?\|[+-?0]*?($|\|\|)	
+(INT;ENZ\|)\+	\1\+;?

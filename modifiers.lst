@@ -1,0 +1,71 @@
+++		+		0		-		--		?		r		##		MOD\KEY
+------------------------------------------------------------------------
+++		+		0		-		--		?		r		##		##
+++		+		##		-		--		?		r		+		high
++		+		##		-		-		?		r		##		great
++		+		##		-		-		?		r		##		greatly
++		+		##		-		-		?		r		?		some
++		+		##		-		-		?		r		?		moderate
++		+		##		-		-		?		r		?		moderately
++		+		##		-		-		?		r		-		small
++		+		##		-		-		?		r		-		weak
++		+		##		-		-		-		r		-		weaker
+++		+		##		-		-		?		r		+		stronger
+++		+		##		-		-		?		r		+		strongly
+##		+		##		-		-		?		r		+		strong
+##		+		##		-		-		-		r		##		dramatic
+++		+		##		-		-		?		r		+		multiple
+##		+		##		-		-		?		r		+		large
+?		!+		##		!-		!--		?		!r		?		does not strongly
++		+		##		-		-		?		r		-		little
+0		0		0		0		0		?		r		0		still
+++		+		##		-		--		?		r		+		more
++		+		?		-		-		?		r		-		almost completely
++		+		?		-		-		?		r		-		almost complete
++		+		##		-		-		?		r		-		almost no
+?		?		?		?		-		0		r		?		almost
++		+		##		-		-		?		r		?		significantly
++		+		##		-		-		?		r		?		markedly
++		+		##		-		-		?		r		?		significant
++		+		##		-		-		?		r		?		substantial
++		+		##		-		-		?		?		-		insignificantly
++		+		##		-		-		?		?		-		insignificant
++		+		##		-		-		?		r		##		important
+##		##		?		-		-		##		r		?		nearly
+++		+		0		--		--		?		r		0		completely
+++		+		0		--		--		?		r		0		complete
+++		+		0		--		--		?		r		0		fully
+++		+		0		--		--		?		r		0		full
+++		+		##		-		--		0		r		0		^normal
+++		+		##		-		--		0		r		0		^normally
+++		+		0		-		--		?		r		0		same
++		+		##		-		-		?		r		-		limited
++		+		?		-		-		?		r		-		partially
++		+		?		-		-		?		r		-		partial
++		+		?		-		-		?		r		-		[\d.,]*? *?%
+!++		!+		0		!-		!--		0		!r		--		does not
+!++		!+		0		!-		!--		0		!r		--		doesn't
+!++		!+		##		!-		!--		0		!r		--		failure to
++		+		##		-		-		?		r		-		less
++		+		##		-		-		?		r		-		leseer
++		+		##		-		-		?		r		-		lower
++		+		?		-		-		?		r		-		slightly
++		+		?		-		-		?		r		-		slight
+!++		!+		0		!-		!--		0		!r		--		no
+!++		!+		0		!-		!--		0		!r		--		no significant
+0		0		0		0		0		0		##		0		no differences
+!++		!+		0		!-		!--		0		!r		--		no important
+!++		!+		##		!-		!--		0		!r		--		not
+##		+		##		##		##		+		##		+		positive
++		+		##		-		-		?		##		-		severe
+##		+		##		-		-		?		##		##		severely
++		+		##		-		-		?		r		?		abnormal
++		+		##		-		-		?		r		?		abnormally
+?		?		##		?		?		?		##		?		constitutively
+?		?		##		?		?		?		##		?		constitutive
+++		+		0		-		--		?		r		0		similar
+?		!+		?		!-		!--		0		!r		--		without
+?		?		?		?		?		?		?		?		probable
+?		?		?		?		?		?		?		?		probably
+++		+		0		-		--		?		r		++		causes
++		+		##		-		-		?		r		-		low

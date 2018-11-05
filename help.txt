@@ -1,0 +1,76 @@
+﻿NOTE!
+When string being loaded into the editor, symbol '¶' added at the end of each line. Deletion of this symbol isn't recomended, since for some combinations of line-ends and next-line-starts (uniprot ID) may arise incorrect line separation.
+
+Program can assess some mutation effects using key words from current processing string and chose appropriate symbol. This function may be tuned by editing of file "actions.lst".  Generally only verbs, verbal nouns and abstract nouns etc. should be placed into this file, but not something like adverbs etc.! Any parts of word may be used and vertical lines can be used to indicate that this word must be interpreted as whole, not as a part of some other word  (or You may use it only for one side of word). 
+There are 6 lines in the "actions.lst" file: 
+first one contains key words linked with "++", 2nd - with "+", 3rd - "0", 4th - "-", 5th - "--", 6 - "?".
+
+There is another file, named "modifiers.lst".  It contains some adverb-like modifiers  used to modulate meaning of "actions". This file also can be tuned (but preferable way is to tune "actions") and You may use simple pythonic regular expressions (without any brackets) in modifiers.lst. For both files You should follow the simple syntax, which can be understood by reading them.
+
+Programm uses "precedents law" when new lines loaded, some line splitted or "search/replace" performed - if some similar string is already processed, current string will be treated similar way. Press Ctrl + z to undo such proceesing. For program to understand, that some strings are similar, all different words (between two strings) must be included into either modifiers.lst or actions.lst.
+
+Program also can consider content of two files 'partlinkers.lst' and 'garbage.lst' when some line being splitted. First one includes elements, which must be omitted on the border of two substrings which being joined into new string. Second file includes pairs of strings of which second must replace first one throughout the entire resulting line.
+
+All changes in these 4 files files will be used after reload of them (press Ctrl-Alt-l or bottom left button).
+----------------------------------------------------------
+
+SHORTCUTS:
+All shortcuts available in latin keyboard layout (some of them may be available in other layouts).
+
+Double click left mouse button to select part of line bordered by spaces. To select only sequence of letters and digits without any other symbols (one word) - press Control and double click left mouse button)
+
+You also can move selection between words using Alt + Left (,) or Alt + Right (.) ("," and "." added for ubuntu etc) 
+(If You press Ctrl + Alt + arrow (,/.) key - only letters, numbers and points will be included into the selected region) and if You press Alt-Shift-arrow(or "." and ",") selection will be bordered only by symbols ";", "|" and tab.
+
+Ctrl + l -> Load new source file.
+Ctrl + r -> Reload current string from source file.
+Ctrl + Alt + r -> Reload keyword dictionaries.
+Ctrl + z -> Undo modifications.
+Ctrl + f (with somthing selected) -> Open UniProt entry and search for selected words there
+
+Press Ctrl + Tab, Ctrl + s, Alt + z -> to split current line (select some part of line - it will be used as splitter, previous and next parts of line will be moved into new line). Other way to split line is also existed: you may previously select some part of sentence and press Alt (Ctrl+alt) + x. This part will be stored and highlighted. If You will try to split sentence now, the first selected part (highlighted) will be left in first string and the next selected part will be transmitted into the second string. The parts of sentence before and after will be common. In a case of a very complex sentences, firstly split the line using first method (generally guided by commas) and only then use second method. Press Esc to exit from this mode.
+
+Ctrl + Enter, Ctrl + space, PgDn -> Put current line into the resulting file and load new from source file.
+Ctrl + BackSpace, PgUp -> Step back to previously edited string
+Alt(Ctrl) + back slash (\) -> Move cursor to start of code block.
+Alt(Ctrl) + home -> Move cursor to the start of description block.
+Alt + End -> Move to activities block
+Ctrl + Alt + End -> Move to level block start
+
+(for activities or second proteins etc.) 
+Alt + c -> Copy part of string and insert it into the 3rd position in code block (Ctrl + Alt + c - to insert ';' between copied strings).
+Alt + v -> Paste string from the clipboard into the 3rd position in code block (Ctrl + Alt + v - to insert ';' between). 
+Ctrl+Alt+u -> Insert UniProt ID in the into the 3rd position in code block.
+Alt + Delete -> To clear target block
+
+Alt-1 -> Insert INT; Alt-2 -> Insert IND;
+Alt-3 -> Insert ENZ; Alt-4(q) -> Insert PHE;
+Alt-5(w) -> Insert LOC; Alt-6(e) -> Insert UNK;
+Alt-7(a) -> Insert CHA; Alt-8(s) -> Insert TRA;
+Alt-9(d) -> Insert CAR; Alt-f -> Insert MIM;
+
+Alt + 0 -> Add "0" into the level field
+Alt + / (?) -> Add "?" into the level field
+Alt + "-" -> Add "-"; Alt + Shift + '-' -> Insert "--"
+Alt + "+" -> Add "+"; Alt + Shift + '+' -> Insert "++"
+Alt + 'r' -> Add "r"
+Alt + Shift + 1 -> Add !
+All levels will be automatically delimited by ';'
+If You want to replace current level -> press Control + respective shortcut
+
+
+Alt + [ -> flank selection by '[' and ']'
+
+Ctrl + h -> Open "search and replace" dialog. List of targets for searching may include multiple "words", which must be splitted by '|'. 
+The more left position a certain word occupies in the search list, the earlier it will be used to search and replace!
+Length of the list of replacements must be exactly the same as length of targets list. These lists will be saved in file rep.lst. Regular expressions can also be used in Your search querries: just set "re#" before the construction You want to search. Note this: "|" may not be used in regex, 'cause it's already used as a search list separator! Numberd groups may be used for replacement.
+
+Press F1 - to show help window, 
+      F2 - for uniprot window (or You can press Control + F - to open uniprot entry and search for selected word. Press Control+e to return into editor)
+      F3 - to view a source file and position within it.
+      F4 - to perform "search and replace" without opening of corresponding dialog, 
+      F5 - to perform reanalyse of effects changes, 
+      F6 (or Alt + ~) - to open editor of shortcut binded frequent inserts. This inserts stored in 'inserts.lst'. To use them - press Ctrl+Alt+some digit key(0 - 9) 
+      F7 - to force "precedents using", all lines will be checked and if some similar string is already processed - current line will be processed similar way.
+
+

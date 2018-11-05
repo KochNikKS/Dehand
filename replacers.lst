@@ -1,0 +1,31 @@
+ on or on |on
+ on on | on 
+ onon | on  
+ to to | to 
+  | 
+ on nor | on 
+ with with | with 
+ with not with | with 
+ in in | in 
+ of of | of 
+\t |\t
+ \t|\t
+ ;|; 
+ the the | the 
+Abolishes not|Does not abolish
+Reduces not|Does not reduce
+Loss not of|No loss of
+Loss of not|No loss of
+Loss not|Does not loss
+of of|of
+Without affecting|Does not affect
+prevents not|does not prevent
+neither on |on 
+in both |in 
+in neither in |in 
+as well as | 
+(\w) -(\w)|\1-\2
+(\w)- (\w)|\1-\2
+inhibits not |does not inhibit 
+of the of |of
+in on in|in
